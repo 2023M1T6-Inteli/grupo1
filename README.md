@@ -9,7 +9,7 @@ Jogo Autônomo para Caminhoneiros Químicos
 
 ## Unímpar
 
-## Integrantes: [Felipe Liberman Fuchs](https://linkedin.com/in/fuchsfelipel), [Bianca Borges Lins](https://www.linkedin.com/in/bianca-borges-969586206)
+## Integrantes: [Felipe Liberman Fuchs](https://linkedin.com/in/fuchsfelipel), [Bianca Borges Lins](https://www.linkedin.com/in/bianca-borges-969586206), [Pedro Henrique Lucarini](https://www.linkedin.com/in/phlucarini)
 
 ## Descrição
 **Unímpar - Porque par sozinho não dá.**
