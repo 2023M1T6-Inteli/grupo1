@@ -15,7 +15,7 @@ Jogo Autônomo para Caminhoneiros Químicos
 - [Giovana Katsuki](#)
 - [Lucca Panico](https://www.linkedin.com/in/lucca-panico-8188921ba/)
 - [Joao Furquim de Campos Suarez](https://www.linkedin.com/in/joao-suarez-104110250/)
-- [Leandro Dos Santos Gomes](#)
+- [Leandro Dos Santos Gomes](https://www.linkedin.com/in/leandro-dos-santos-gomes/)
 
 ## Descrição
 **Unímpar - Porque par sozinho não dá.**
