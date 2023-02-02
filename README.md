@@ -9,7 +9,7 @@ Jogo Autônomo para Caminhoneiros Químicos
 
 ## Unímpar
 
-## Integrantes: [Felipe Liberman Fuchs](https://linkedin.com/in/fuchsfelipel), <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: [Felipe Liberman Fuchs](https://linkedin.com/in/fuchsfelipel), [Bianca Borges Lins](https://www.linkedin.com/in/bianca-borges-969586206)
 
 ## Descrição
 **Unímpar - Porque par sozinho não dá.**
