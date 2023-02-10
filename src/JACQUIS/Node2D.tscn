@@ -38,7 +38,7 @@ position = Vector2( 513.5, 146 )
 shape = SubResource( 1 )
 
 [node name="Caminhao" type="KinematicBody2D" parent="."]
-position = Vector2( -266, 430 )
+position = Vector2( 64, 442 )
 
 [node name="Caminhão-1png-1png" type="Sprite" parent="Caminhao"]
 position = Vector2( -96, 76 )
@@ -71,5 +71,4 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="carro_red"]
 position = Vector2( -189.913, 91.6583 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
