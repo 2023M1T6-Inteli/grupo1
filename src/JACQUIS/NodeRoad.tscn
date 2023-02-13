@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://backgroundRoad.png" type="Texture" id=1]
+[ext_resource path="res://truck.png" type="Texture" id=2]
+[ext_resource path="res://Truck.gd" type="Script" id=3]
+
+[sub_resource type="GDScript" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 513.5, 153.25 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 513.75, 13.625 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 108.5, 52 )
+
+[node name="NodeRoad" type="Node2D"]
+position = Vector2( 5, 2 )
+script = SubResource( 3 )
+__meta__ = {
+"_edit_vertical_guides_": [ -217.0 ]
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 3, -5 )
+
+[node name="backgroundRoad" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 346, 331 )
+scale = Vector2( 1.60625, 1.64722 )
+texture = ExtResource( 1 )
+offset = Vector2( 102.724, -19.1231 )
+
+[node name="UpCollision" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 511, 156.75 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 510, 582.625 )
+shape = SubResource( 4 )
+
+[node name="Truck" type="KinematicBody2D" parent="."]
+position = Vector2( 64, 442 )
+script = ExtResource( 3 )
+
+[node name="truck" type="Sprite" parent="Truck"]
+position = Vector2( 153, 67 )
+scale = Vector2( 1.0625, 1.02031 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
+position = Vector2( 151.5, 69 )
+shape = SubResource( 2 )
