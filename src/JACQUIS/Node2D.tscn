@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Node2D.gd" type="Script" id=1]
-[ext_resource path="res://Caminhão-1.png-1.png.png" type="Texture" id=2]
+[ext_resource path="res://truck.png" type="Texture" id=2]
 [ext_resource path="res://pixil-frame-0.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
