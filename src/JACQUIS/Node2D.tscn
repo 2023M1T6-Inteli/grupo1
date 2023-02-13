@@ -1,18 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Node2D.gd" type="Script" id=1]
 [ext_resource path="res://Caminhão-1.png-1.png.png" type="Texture" id=2]
 [ext_resource path="res://pixil-frame-0.png" type="Texture" id=3]
-[ext_resource path="res://carro-1.png (1)-1.png.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 510.5, 143.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 137.25, 62.25 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 168.29, 74.9649 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 5, 2 )
@@ -44,15 +40,3 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhao"]
 position = Vector2( -119.25, 65.25 )
 shape = SubResource( 2 )
-
-[node name="carro_red" type="KinematicBody2D" parent="."]
-position = Vector2( 2096, 451 )
-scale = Vector2( 0.61976, 0.65894 )
-
-[node name="Carro-1png(1)-1png" type="Sprite" parent="carro_red"]
-position = Vector2( -190.396, 91.0553 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="carro_red"]
-position = Vector2( -189.913, 91.6583 )
-shape = SubResource( 4 )

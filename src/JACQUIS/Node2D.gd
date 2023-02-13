@@ -12,11 +12,6 @@ func _ready():
 
 # executa essa função a cada frame
 func _process(delta):
-	#Faz o carro vermelho ir para a esquerda e reaparecer
-	$carro_red.position.x -= 2*car
-	if ($carro_red.position.x) < -200:
-			$carro_red.position.x = 1700
-	
 	#Movimento do caminhão para a direita
 	if Input.is_action_pressed("ui_right"):
 			$Caminhao.position.x += 2*truck
