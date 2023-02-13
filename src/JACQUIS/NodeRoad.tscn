@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://backgroundRoad.png" type="Texture" id=1]
+[ext_resource path="res://truck.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Node2D
+
+
+# Variaveis
+var car = 2.5
+var truck = 1.5
+
+# executa essa função ao carregar o jogo
+func _ready():
+	pass # Replace with function body.
+
+
+# executa essa função a cada frame
+func _process(delta):
+	#Movimento do caminhão para a direita
+	if Input.is_action_pressed(\"ui_right\"):
+			$Truck.position.x += 2*truck
+		
+	#Movimento do caminhão para a esquerda
+	if Input.is_action_pressed(\"ui_left\"):
+			$Truck.position.x -= 2*truck
+	
+	#Movimento do caminhão para cima 
+	if Input.is_action_pressed(\"ui_up\"):
+			$Truck.position.y -= 2*truck
+		
+	#movimento do caminhão para baixo
+	if Input.is_action_pressed(\"ui_down\"):
+			$Truck.position.y += 2*truck
+			
+			
+			
+		
+#	pass
+"
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 510.5, 143.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 137.25, 62.25 )
+
+[node name="NodeRoad" type="Node2D"]
+position = Vector2( 5, 2 )
+script = SubResource( 3 )
+__meta__ = {
+"_edit_vertical_guides_": [ -217.0 ]
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 3, -5 )
+
+[node name="backgroundRoad" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 511.001, 299.5 )
+scale = Vector2( 1.60625, 1.64722 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 513.5, 146 )
+shape = SubResource( 1 )
+
+[node name="Truck" type="KinematicBody2D" parent="."]
+position = Vector2( 64, 442 )
+
+[node name="truck" type="Sprite" parent="Truck"]
+position = Vector2( -96, 76 )
+scale = Vector2( 1.0625, 1.02031 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
+position = Vector2( -119.25, 65.25 )
+shape = SubResource( 2 )

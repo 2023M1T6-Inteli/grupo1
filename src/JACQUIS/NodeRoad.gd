@@ -27,8 +27,4 @@ func _process(delta):
 	#movimento do caminhão para baixo
 	if Input.is_action_pressed("ui_down"):
 			$Caminhao.position.y += 2*truck
-			
-			
-			
-		
 #	pass
