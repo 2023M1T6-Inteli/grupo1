@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Node2D.gd" type="Script" id=1]
 [ext_resource path="res://truck.png" type="Texture" id=2]
-[ext_resource path="res://pixil-frame-0.png" type="Texture" id=3]
+[ext_resource path="res://backgroundRoad.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 510.5, 143.5 )
@@ -20,7 +20,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 3, -5 )
 
-[node name="Pixil-frame-0" type="Sprite" parent="StaticBody2D"]
+[node name="backgroundRoad" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 511.001, 299.5 )
 scale = Vector2( 1.60625, 1.64722 )
 texture = ExtResource( 3 )
@@ -32,7 +32,7 @@ shape = SubResource( 1 )
 [node name="Caminhao" type="KinematicBody2D" parent="."]
 position = Vector2( 64, 442 )
 
-[node name="Caminhão-1png-1png" type="Sprite" parent="Caminhao"]
+[node name="truck" type="Sprite" parent="Caminhao"]
 position = Vector2( -96, 76 )
 scale = Vector2( 1.0625, 1.02031 )
 texture = ExtResource( 2 )
