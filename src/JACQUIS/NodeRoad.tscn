@@ -11,13 +11,13 @@
 extents = Vector2( 512, 152.625 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 513.75, 13.625 )
+extents = Vector2( 513.75, 5.625 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 108.5, 52 )
+extents = Vector2( 91.75, 41.5 )
 
 [node name="NodeRoad" type="Node2D"]
-position = Vector2( 5, 2 )
+position = Vector2( 5, 3 )
 script = SubResource( 3 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -42,7 +42,7 @@ position = Vector2( 504, 155.625 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 510, 582.625 )
+position = Vector2( 510, 590.625 )
 shape = SubResource( 4 )
 
 [node name="Truck" type="KinematicBody2D" parent="."]
@@ -50,10 +50,10 @@ position = Vector2( 64, 442 )
 script = ExtResource( 3 )
 
 [node name="truck" type="Sprite" parent="Truck"]
-position = Vector2( 153, 67 )
+position = Vector2( 141, 90 )
 scale = Vector2( 1.0625, 1.02031 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
-position = Vector2( 151.5, 69 )
+position = Vector2( 139.25, 93.5 )
 shape = SubResource( 2 )
