@@ -8,10 +8,10 @@
 [sub_resource type="GDScript" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 512, 152.625 )
+extents = Vector2( 512, 131 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 513.75, 5.625 )
+extents = Vector2( 513.75, 6.125 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 91.75, 41.5 )
@@ -37,11 +37,11 @@ offset = Vector2( 102.724, -19.1231 )
 position = Vector2( 3, -5 )
 
 [node name="UpCollision" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 504, 155.625 )
+position = Vector2( 504, 134 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 510, 590.625 )
+position = Vector2( 510, 590.125 )
 shape = SubResource( 4 )
 
 [node name="Truck" type="KinematicBody2D" parent="."]
