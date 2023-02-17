@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jogar.png-9e92a47a9d0655bc6e0a11d57481d7d7.stex"
+path="res://.import/background-tela-inical.png-b5e0ca4043a47cf984057d32e15d4cb8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://jogar.png"
-dest_files=[ "res://.import/jogar.png-9e92a47a9d0655bc6e0a11d57481d7d7.stex" ]
+source_file="res://assets/background-tela-inical.png"
+dest_files=[ "res://.import/background-tela-inical.png-b5e0ca4043a47cf984057d32e15d4cb8.stex" ]
 
 [params]
 

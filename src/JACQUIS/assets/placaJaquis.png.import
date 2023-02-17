@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jacquis.png-c4ff98869f9f25652288bd807d608d50.stex"
+path="res://.import/placaJaquis.png-7d22d01e89e88d4a4c0a31ceea45bcc3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://jacquis.png"
-dest_files=[ "res://.import/jacquis.png-c4ff98869f9f25652288bd807d608d50.stex" ]
+source_file="res://assets/placaJaquis.png"
+dest_files=[ "res://.import/placaJaquis.png-7d22d01e89e88d4a4c0a31ceea45bcc3.stex" ]
 
 [params]
 
