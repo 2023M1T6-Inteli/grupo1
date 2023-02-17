@@ -8,4 +8,3 @@ func _process(delta):
 		print(scrolling_speed)
 
 	scroll_offset.x -= scrolling_speed * delta
-	
