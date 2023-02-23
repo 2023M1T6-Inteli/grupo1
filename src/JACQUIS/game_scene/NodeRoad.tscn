@@ -19,8 +19,13 @@ func _process(delta):
 
 	# Executes every 2 seconds
 	if (currentSecond % 2 == 0 and not ranObstacleChoice):
-		ranObstacleChoice = true
+		# Chooses the obstacles for 2 rows, leaving 1 null
+		var rowsObstacles = { 0: null, 1: null, 2: null}
+		for i in _unique_random(0, 2, 2):
+			rowsObstacles[i] = _random_obstacle()
 		
+		_add_obstacles_to_rows(rowsObstacles)
+		ranObstacleChoice = true
 
 # Escolhe n números aleatórios entre 'from' e 'to' sem repetições
 func _unique_random(from, to, n):
@@ -41,7 +46,6 @@ func _unique_random(from, to, n):
 
 	return numbers
 
-
 # Escolhe n números aleatórios entre 'from' e 'to' sem repetições
 func _random_obstacle():
 	# Starts the Randomizer
@@ -50,6 +54,9 @@ func _random_obstacle():
 	
 	var availableObstacles = [\"rollOver\", \"spill\", \"crash\"]
 	return availableObstacles[rng.randi_range(0, 2)]
+
+func _add_obstacles_to_rows(rowsObstacles):
+	print(rowsObstacles)
 "
 
 [sub_resource type="RectangleShape2D" id=1]
