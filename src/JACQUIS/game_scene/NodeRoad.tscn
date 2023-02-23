@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://game_scene/ParallaxBackground.gd" type="Script" id=1]
 [ext_resource path="res://assets/truck.png" type="Texture" id=2]
 [ext_resource path="res://game_scene/sprites/Truck.gd" type="Script" id=3]
 [ext_resource path="res://assets/backgroundRoad.png" type="Texture" id=4]
+[ext_resource path="res://game_scene/Car.gd" type="Script" id=5]
+[ext_resource path="res://assets/car.png" type="Texture" id=6]
 
 [sub_resource type="GDScript" id=3]
 script/source = "extends Node2D
@@ -66,8 +68,14 @@ extents = Vector2( 512, 131 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 513.75, 6.125 )
 
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 3.5, 303.5 )
+
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 91.75, 41.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 80.5, 37 )
 
 [node name="NodeRoad" type="Node2D"]
 position = Vector2( 5, 3 )
@@ -89,13 +97,17 @@ offset = Vector2( 102.724, -19.1231 )
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 3, -5 )
 
-[node name="UpCollision" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="TopCollision" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 504, 134 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="BottomCollision" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 510, 590.125 )
 shape = SubResource( 4 )
+
+[node name="LeftCollision" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -6.5, 293.5 )
+shape = SubResource( 6 )
 
 [node name="Truck" type="KinematicBody2D" parent="."]
 position = Vector2( 64, 442 )
@@ -109,3 +121,14 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
 position = Vector2( 139.25, 93.5 )
 shape = SubResource( 2 )
+
+[node name="Car" type="KinematicBody2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Car" type="Sprite" parent="Car"]
+position = Vector2( 1114, 301 )
+texture = ExtResource( 6 )
+
+[node name="CarCollisionShape" type="CollisionShape2D" parent="Car"]
+position = Vector2( 1116, 301 )
+shape = SubResource( 5 )
