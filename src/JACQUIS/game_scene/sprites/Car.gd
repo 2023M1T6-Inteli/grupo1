@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var moving = true
+var moving = false
 const ROW_XVALS = { 0: 302, 1: 411, 3: 527}
 # We add 12% to the sprite_speed so it doesn't seem like it's stuck to the background
 var sprite_speed = 225.0 * 1.22

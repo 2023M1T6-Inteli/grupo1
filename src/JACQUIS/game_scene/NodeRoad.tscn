@@ -29,8 +29,11 @@ func _process(delta):
 		# Chooses the obstacles for 2 rows, leaving 1 null
 		var rowsObstacles = { 0: null, 1: null, 2: null}
 		for i in _unique_random(0, 2, 2):
-			rowsObstacles[i] = _random_obstacle()
-		
+			var randomObstacle = _random_obstacle()
+			while rowsObstacles.has(randomObstacle):
+				randomObstacle = _random_obstacle()
+			rowsObstacles[i] = randomObstacle
+			
 		_add_obstacles_to_rows(rowsObstacles)
 		ranObstacleChoice = true
 
@@ -64,6 +67,15 @@ func _random_obstacle():
 
 func _add_obstacles_to_rows(rowsObstacles):
 	print(rowsObstacles)
+	for k in rowsObstacles:
+		var v = rowsObstacles[k]
+		if (v != null):
+			if (v == \"hole\"):
+				$Hole.moving = true
+			elif (v == \"puddle\"):
+				$Puddle.moving = true
+			elif (v == \"car\"):
+				$Car.moving = true
 "
 
 [sub_resource type="RectangleShape2D" id=1]

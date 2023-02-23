@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var moving = true
+var moving = false
 const ROW_XVALS = { 0: 302, 1: 411, 3: 527}
 var sprite_speed = 225.0
 
