@@ -6,6 +6,29 @@
 [ext_resource path="res://assets/backgroundRoad.png" type="Texture" id=4]
 
 [sub_resource type="GDScript" id=3]
+script/source = "extends Node2D
+
+var ranObstacleChoice = false
+
+# Executa a cada frame
+func _process(delta):
+	pass
+
+# Escolhe n números aleatórios entre 'from' e 'to' sem repetições
+func _unique_random(from, to, n):
+	# Starts the Randomizer
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	
+	var numbers = []
+	while len(numbers) < n:
+		var randomNumber = rng.randi_range(from, to)
+		while numbers.has(randomNumber):
+			randomNumber = rng.randi_range(from, to)
+		numbers.append(randomNumber)
+
+	return numbers
+"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 512, 131 )

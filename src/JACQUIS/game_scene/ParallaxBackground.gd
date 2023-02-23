@@ -13,4 +13,3 @@ func _process(delta):
 func _increaseScrollingSpeed(delta):
 	if scrolling_speed <= 500:
 		scrolling_speed += delta
-		print(scrolling_speed)
