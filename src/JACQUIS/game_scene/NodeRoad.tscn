@@ -1,11 +1,15 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://game_scene/ParallaxBackground.gd" type="Script" id=1]
 [ext_resource path="res://assets/truck.png" type="Texture" id=2]
 [ext_resource path="res://game_scene/sprites/Truck.gd" type="Script" id=3]
 [ext_resource path="res://assets/backgroundRoad.png" type="Texture" id=4]
-[ext_resource path="res://game_scene/Car.gd" type="Script" id=5]
+[ext_resource path="res://game_scene/sprites/Car.gd" type="Script" id=5]
 [ext_resource path="res://assets/car.png" type="Texture" id=6]
+[ext_resource path="res://assets/puddle.png" type="Texture" id=7]
+[ext_resource path="res://assets/hole.png" type="Texture" id=8]
+[ext_resource path="res://game_scene/sprites/Puddle.gd" type="Script" id=9]
+[ext_resource path="res://game_scene/sprites/Hole.gd" type="Script" id=10]
 
 [sub_resource type="GDScript" id=3]
 script/source = "extends Node2D
@@ -68,14 +72,17 @@ extents = Vector2( 512, 131 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 513.75, 6.125 )
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 3.5, 303.5 )
-
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 91.75, 41.5 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 80.5, 37 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 63, 40.75 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 79, 27.75 )
 
 [node name="NodeRoad" type="Node2D"]
 position = Vector2( 5, 3 )
@@ -105,10 +112,6 @@ shape = SubResource( 1 )
 position = Vector2( 510, 590.125 )
 shape = SubResource( 4 )
 
-[node name="LeftCollision" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -6.5, 293.5 )
-shape = SubResource( 6 )
-
 [node name="Truck" type="KinematicBody2D" parent="."]
 position = Vector2( 64, 442 )
 script = ExtResource( 3 )
@@ -132,3 +135,25 @@ texture = ExtResource( 6 )
 [node name="CarCollisionShape" type="CollisionShape2D" parent="Car"]
 position = Vector2( 1116, 301 )
 shape = SubResource( 5 )
+
+[node name="Puddle" type="KinematicBody2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="Puddle" type="Sprite" parent="Puddle"]
+position = Vector2( 1110, 413 )
+texture = ExtResource( 7 )
+
+[node name="PuddleCollision" type="CollisionShape2D" parent="Puddle"]
+position = Vector2( 1121, 413.25 )
+shape = SubResource( 6 )
+
+[node name="Hole" type="KinematicBody2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="Hole" type="Sprite" parent="Hole"]
+position = Vector2( 1121, 528 )
+texture = ExtResource( 8 )
+
+[node name="HoleCollision" type="CollisionShape2D" parent="Hole"]
+position = Vector2( 1123, 525.25 )
+shape = SubResource( 7 )
