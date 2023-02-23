@@ -53,7 +53,7 @@ func _random_obstacle():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	
-	var availableObstacles = [\"rollOver\", \"spill\", \"crash\"]
+	var availableObstacles = [\"hole\", \"puddle\", \"car\"]
 	return availableObstacles[rng.randi_range(0, 2)]
 
 func _add_obstacles_to_rows(rowsObstacles):

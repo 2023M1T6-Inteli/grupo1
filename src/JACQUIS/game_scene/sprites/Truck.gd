@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const Y_DELTA = 350
+const Y_DELTA = 450
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
