@@ -10,18 +10,17 @@ script/source = "extends Node2D
 
 var ranObstacleChoice = false
 
-# Executa a cada frame
 func _process(delta):
 	var currentSecond = int(floor(OS.get_ticks_msec() / 1000.0))
 
-	# Faz ranObstacleChoice ser falso caso já estejamos em um segundo impar
+	# Make ranObstacleChoice false if we're in an odd second
 	if (currentSecond % 2 != 0 and ranObstacleChoice):
 		ranObstacleChoice = false
 
-	# Executa a cada 2 segundos
+	# Executes every 2 seconds
 	if (currentSecond % 2 == 0 and not ranObstacleChoice):
-		var obstaclesOnRows = _unique_random(1, 3, 2)
 		ranObstacleChoice = true
+		
 
 # Escolhe n números aleatórios entre 'from' e 'to' sem repetições
 func _unique_random(from, to, n):
@@ -30,13 +29,28 @@ func _unique_random(from, to, n):
 	rng.randomize()
 	
 	var numbers = []
+	
+	# Ensures we're only generating n numbers
 	while len(numbers) < n:
 		var randomNumber = rng.randi_range(from, to)
+		
+		# Keep regenerating number until it's unique
 		while numbers.has(randomNumber):
 			randomNumber = rng.randi_range(from, to)
 		numbers.append(randomNumber)
 
-	return numbers"
+	return numbers
+
+
+# Escolhe n números aleatórios entre 'from' e 'to' sem repetições
+func _random_obstacle():
+	# Starts the Randomizer
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	
+	var availableObstacles = [\"rollOver\", \"spill\", \"crash\"]
+	return availableObstacles[rng.randi_range(0, 2)]
+"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 512, 131 )
