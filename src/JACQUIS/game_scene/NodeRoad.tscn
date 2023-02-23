@@ -16,7 +16,6 @@ script/source = "extends Node2D
 
 var ranObstacleChoice = false
 
-# warning-ignore:unused_argument
 func _process(delta):
 	var currentSecond = int(floor(OS.get_ticks_msec() / 1000.0))
 

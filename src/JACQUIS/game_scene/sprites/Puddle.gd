@@ -13,3 +13,8 @@ func _physics_process(delta):
 	if (moving):
 		var dislocation = Vector2(-sprite_speed, 0)
 		move_and_slide(dislocation)
+		if get_slide_count() > 0:
+			_process_collision()
+			
+func _process_collision():
+	pass
