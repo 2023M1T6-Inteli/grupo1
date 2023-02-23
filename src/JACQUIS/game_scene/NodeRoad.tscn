@@ -1,11 +1,81 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://game_scene/ParallaxBackground.gd" type="Script" id=1]
 [ext_resource path="res://assets/truck.png" type="Texture" id=2]
 [ext_resource path="res://game_scene/sprites/Truck.gd" type="Script" id=3]
 [ext_resource path="res://assets/backgroundRoad.png" type="Texture" id=4]
+[ext_resource path="res://game_scene/sprites/Car.gd" type="Script" id=5]
+[ext_resource path="res://assets/car.png" type="Texture" id=6]
+[ext_resource path="res://assets/puddle.png" type="Texture" id=7]
+[ext_resource path="res://assets/hole.png" type="Texture" id=8]
+[ext_resource path="res://game_scene/sprites/Puddle.gd" type="Script" id=9]
+[ext_resource path="res://game_scene/sprites/Hole.gd" type="Script" id=10]
 
 [sub_resource type="GDScript" id=3]
+script/source = "extends Node2D
+
+var ranObstacleChoice = false
+
+func _process(delta):
+	var currentSecond = int(floor(OS.get_ticks_msec() / 1000.0))
+
+	# Make ranObstacleChoice false if we're in an odd second
+	if (currentSecond % 2 != 0 and ranObstacleChoice):
+		ranObstacleChoice = false
+
+	# Executes every 2 seconds
+	if (currentSecond % 2 == 0 and not ranObstacleChoice):
+		# Chooses the obstacles for 2 rows, leaving 1 null
+		var rowsObstacles = { 0: null, 1: null, 2: null}
+		for i in _unique_random(0, 2, 2):
+			var randomObstacle = _random_obstacle()
+			while rowsObstacles.has(randomObstacle):
+				randomObstacle = _random_obstacle()
+			rowsObstacles[i] = randomObstacle
+			
+		_add_obstacles_to_rows(rowsObstacles)
+		ranObstacleChoice = true
+
+# Escolhe n números aleatórios entre 'from' e 'to' sem repetições
+func _unique_random(from, to, n):
+	# Starts the Randomizer
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	
+	var numbers = []
+	
+	# Ensures we're only generating n numbers
+	while len(numbers) < n:
+		var randomNumber = rng.randi_range(from, to)
+		
+		# Keep regenerating number until it's unique
+		while numbers.has(randomNumber):
+			randomNumber = rng.randi_range(from, to)
+		numbers.append(randomNumber)
+
+	return numbers
+
+# Escolhe n números aleatórios entre 'from' e 'to' sem repetições
+func _random_obstacle():
+	# Starts the Randomizer
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	
+	var availableObstacles = [\"hole\", \"puddle\", \"car\"]
+	return availableObstacles[rng.randi_range(0, 2)]
+
+func _add_obstacles_to_rows(rowsObstacles):
+	print(rowsObstacles)
+	for k in rowsObstacles:
+		var v = rowsObstacles[k]
+		if (v != null):
+			if (v == \"hole\"):
+				$Hole.moving = true
+			elif (v == \"puddle\"):
+				$Puddle.moving = true
+			elif (v == \"car\"):
+				$Car.moving = true
+"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 512, 131 )
@@ -15,6 +85,15 @@ extents = Vector2( 513.75, 6.125 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 91.75, 41.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 80.5, 37 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 63, 40.75 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 79, 27.75 )
 
 [node name="NodeRoad" type="Node2D"]
 position = Vector2( 5, 3 )
@@ -36,11 +115,11 @@ offset = Vector2( 102.724, -19.1231 )
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 3, -5 )
 
-[node name="UpCollision" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="TopCollision" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 504, 134 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="BottomCollision" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 510, 590.125 )
 shape = SubResource( 4 )
 
@@ -56,3 +135,36 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
 position = Vector2( 139.25, 93.5 )
 shape = SubResource( 2 )
+
+[node name="Car" type="KinematicBody2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Car" type="Sprite" parent="Car"]
+position = Vector2( 1114, 301 )
+texture = ExtResource( 6 )
+
+[node name="CarCollisionShape" type="CollisionShape2D" parent="Car"]
+position = Vector2( 1116, 301 )
+shape = SubResource( 5 )
+
+[node name="Puddle" type="KinematicBody2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="Puddle" type="Sprite" parent="Puddle"]
+position = Vector2( 1110, 413 )
+texture = ExtResource( 7 )
+
+[node name="PuddleCollision" type="CollisionShape2D" parent="Puddle"]
+position = Vector2( 1121, 413.25 )
+shape = SubResource( 6 )
+
+[node name="Hole" type="KinematicBody2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="Hole" type="Sprite" parent="Hole"]
+position = Vector2( 1121, 528 )
+texture = ExtResource( 8 )
+
+[node name="HoleCollision" type="CollisionShape2D" parent="Hole"]
+position = Vector2( 1123, 525.25 )
+shape = SubResource( 7 )
