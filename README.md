@@ -13,7 +13,6 @@ Jogo Autônomo para Caminhoneiros Químicos
 - [Bianca Borges Lins](https://www.linkedin.com/in/bianca-borges-969586206)
 - [Pedro Henrique Lucarini](https://www.linkedin.com/in/phlucarini)
 - [Giovana Katsuki](#)
-- [Lucca Panico](https://www.linkedin.com/in/lucca-panico-8188921ba/)
 - [Joao Furquim de Campos Suarez](https://www.linkedin.com/in/joao-suarez-104110250/)
 - [Leandro Dos Santos Gomes](https://www.linkedin.com/in/leandro-dos-santos-gomes/)
 
@@ -40,6 +39,11 @@ Jogo Autônomo para Caminhoneiros Químicos
     - HTML
   - imagens
   - src
+    - JAQUIS
+      - assets
+      - game_scene
+        - sprites
+      - hole_minigame
 - README.md
 
 ## 📁 Diretórios Importantes
@@ -52,6 +56,8 @@ Jogo Autônomo para Caminhoneiros Químicos
 - **imagens**: Algumas imagens do jogo/sistema e logos prontos para serem utilizados e visualizados.
 
 - **src**: Nesta pasta irá todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
+
+- **src/JAQUIS/assets**: Nesta página você encontra todas as imagens e sons utilizados no jogo.
 
 ## 🛠 Instalação
 
@@ -83,7 +89,16 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
-
+* 0.3.2 - 24/02/2022 (Artefato 4)
+  * Ajuste gradual da velocidade do jogo
+  * Implementação dos obstáculo
+  * Hooks para detecção de colisão entre caminhão e obstáculos
+  * Criação de uma Tela Inicial
+* 0.3.1 - 17/02/2022
+  * Estrutura Básica do Jogo
+  * Refatoração
+* 0.3.0 - 10/02/2022
+  * MVP
 * 0.2.1 - 25/01/2022
     * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
 * 0.2.0 - 15/01/2022
