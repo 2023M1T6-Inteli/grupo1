@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jacquis.png-3fc5055932056afa799530d6a3dc013b.stex"
+path="res://.import/Celular.png-9abf03e91921a8f86342d3345fdbc242.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/jacquis.png"
-dest_files=[ "res://.import/jacquis.png-3fc5055932056afa799530d6a3dc013b.stex" ]
+source_file="res://assets/Celular.png"
+dest_files=[ "res://.import/Celular.png-9abf03e91921a8f86342d3345fdbc242.stex" ]
 
 [params]
 

@@ -17,4 +17,4 @@ func _physics_process(delta):
 			_process_collision()
 
 func _process_collision():
-	get_tree().change_scene("res://hole_scene/HoleScene.tscn")
+	get_tree().change_scene("res://checklist_scene/Instruções.tscn")
