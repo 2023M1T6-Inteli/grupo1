@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/background.checklist.png" type="Texture" id=1]
 [ext_resource path="res://assets/Checklist.png" type="Texture" id=2]
 [ext_resource path="res://assets/ChecklistScene.gd" type="Script" id=3]
 [ext_resource path="res://Retro Gaming.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Icon.errado.png" type="Texture" id=5]
 [ext_resource path="res://assets/Botão conferir.png" type="Texture" id=6]
 [ext_resource path="res://assets/Jacquis/Jacquis.boné.esq.png" type="Texture" id=7]
 [ext_resource path="res://assets/Balao b.png" type="Texture" id=8]
@@ -40,11 +41,21 @@ script = ExtResource( 3 )
 position = Vector2( 515, 303.217 )
 scale = Vector2( 0.936336, 0.941668 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Checklist" type="Sprite" parent="."]
 position = Vector2( 280, 291 )
 scale = Vector2( 0.76875, 0.76875 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="Checklist"]
+margin_right = 40.0
+margin_bottom = 14.0
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
@@ -101,12 +112,6 @@ margin_right = 375.0
 margin_bottom = 408.0
 custom_fonts/font = SubResource( 5 )
 text = "Viajar à 70km/h"
-
-[node name="Label7" type="Label" parent="."]
-margin_left = 249.0
-margin_top = 444.0
-margin_right = 289.0
-margin_bottom = 458.0
 
 [node name="CheckBox" type="CheckBox" parent="."]
 modulate = Color( 0.909804, 0.901961, 0.901961, 1 )
@@ -187,6 +192,36 @@ custom_fonts/font = SubResource( 8 )
 text = "Antes de iniciar selecione as ações 
 corretas para o percurso. Lembre-se
  de sempre priorizar a segurança!"
+
+[node name="X6" type="Sprite" parent="."]
+position = Vector2( 192, 396.111 )
+scale = Vector2( 0.0287584, 0.0285394 )
+texture = ExtResource( 5 )
+
+[node name="X1" type="Sprite" parent="."]
+position = Vector2( 192, 152.974 )
+scale = Vector2( 0.0287584, 0.0285394 )
+texture = ExtResource( 5 )
+
+[node name="X2" type="Sprite" parent="."]
+position = Vector2( 191, 201.601 )
+scale = Vector2( 0.0287584, 0.0285394 )
+texture = ExtResource( 5 )
+
+[node name="X3" type="Sprite" parent="."]
+position = Vector2( 191, 251.242 )
+scale = Vector2( 0.0287584, 0.0285394 )
+texture = ExtResource( 5 )
+
+[node name="X4" type="Sprite" parent="."]
+position = Vector2( 190, 294.804 )
+scale = Vector2( 0.0287584, 0.0285394 )
+texture = ExtResource( 5 )
+
+[node name="X5" type="Sprite" parent="."]
+position = Vector2( 190, 347.484 )
+scale = Vector2( 0.0287584, 0.0285394 )
+texture = ExtResource( 5 )
 
 [connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
