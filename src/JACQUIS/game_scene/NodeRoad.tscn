@@ -1,14 +1,12 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://game_scene/ParallaxBackground.gd" type="Script" id=1]
-[ext_resource path="res://assets/truck.png" type="Texture" id=2]
+[ext_resource path="res://assets/Caminhao_new.png" type="Texture" id=2]
 [ext_resource path="res://game_scene/sprites/Truck.gd" type="Script" id=3]
-[ext_resource path="res://assets/backgroundRoad.png" type="Texture" id=4]
+[ext_resource path="res://assets/estrada_predios.png" type="Texture" id=4]
 [ext_resource path="res://game_scene/sprites/Car.gd" type="Script" id=5]
-[ext_resource path="res://assets/car.png" type="Texture" id=6]
-[ext_resource path="res://assets/puddle.png" type="Texture" id=7]
-[ext_resource path="res://assets/hole.png" type="Texture" id=8]
-[ext_resource path="res://game_scene/sprites/Puddle.gd" type="Script" id=9]
+[ext_resource path="res://assets/Hole_new.png" type="Texture" id=6]
+[ext_resource path="res://assets/carro_vermelho.png" type="Texture" id=8]
 [ext_resource path="res://game_scene/sprites/Hole.gd" type="Script" id=10]
 
 [sub_resource type="GDScript" id=3]
@@ -61,8 +59,8 @@ func _random_obstacle():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	
-	var availableObstacles = [\"hole\", \"puddle\", \"car\"]
-	return availableObstacles[rng.randi_range(0, 2)]
+	var availableObstacles = [\"hole\", \"car\"]
+	return availableObstacles[rng.randi_range(0, 1)]
 
 func _add_obstacles_to_rows(rowsObstacles):
 	print(rowsObstacles)
@@ -71,29 +69,24 @@ func _add_obstacles_to_rows(rowsObstacles):
 		if (v != null):
 			if (v == \"hole\"):
 				$Hole.moving = true
-			elif (v == \"puddle\"):
-				$Puddle.moving = true
 			elif (v == \"car\"):
 				$Car.moving = true
 "
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 512, 131 )
+extents = Vector2( 513.5, 157.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 513.375, 0.375 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 91.75, 41.5 )
-
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 80.5, 37 )
+extents = Vector2( 71, 37 )
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 63, 40.75 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 91.75, 42.25 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 79, 27.75 )
+extents = Vector2( 72, 21.375 )
 
 [node name="NodeRoad" type="Node2D"]
 position = Vector2( 5, 2 )
@@ -106,65 +99,56 @@ script = ExtResource( 1 )
 z_as_relative = false
 motion_mirroring = Vector2( 1024, 0 )
 
-[node name="backgroundRoad" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 347.642, 328 )
-scale = Vector2( 1.6, 1.64722 )
+[node name="EstradaPredios" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 815.643, 299.5 )
+scale = Vector2( 8.58571, 8.58571 )
 texture = ExtResource( 4 )
-offset = Vector2( 102.724, -19.1231 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 3, -5 )
 
 [node name="TopCollision" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 504, 134 )
+position = Vector2( 502.5, 160.5 )
 shape = SubResource( 1 )
 
 [node name="BottomCollision" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 509.625, 596.625 )
 shape = SubResource( 4 )
 
+[node name="Car" type="KinematicBody2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="CarroVermelho" type="Sprite" parent="Car"]
+position = Vector2( 1127, 355 )
+scale = Vector2( 2.24609, 2.24609 )
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="CarCollisionShape" type="CollisionShape2D" parent="Car"]
+position = Vector2( 1104, 357 )
+shape = SubResource( 5 )
+
 [node name="Truck" type="KinematicBody2D" parent="."]
 position = Vector2( 64, 442 )
 script = ExtResource( 3 )
 
-[node name="truck" type="Sprite" parent="Truck"]
-position = Vector2( 140, 101 )
-scale = Vector2( 1.0625, 1.02031 )
-texture = ExtResource( 2 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
-position = Vector2( 140, 99 )
+position = Vector2( 26, 24 )
 shape = SubResource( 2 )
 
-[node name="Car" type="KinematicBody2D" parent="."]
-script = ExtResource( 5 )
-
-[node name="Car" type="Sprite" parent="Car"]
-position = Vector2( 1116, 332 )
-texture = ExtResource( 6 )
-
-[node name="CarCollisionShape" type="CollisionShape2D" parent="Car"]
-position = Vector2( 1121, 335 )
-shape = SubResource( 5 )
-
-[node name="Puddle" type="KinematicBody2D" parent="."]
-script = ExtResource( 9 )
-
-[node name="Puddle" type="Sprite" parent="Puddle"]
-position = Vector2( 1109, 442 )
-texture = ExtResource( 7 )
-
-[node name="PuddleCollision" type="CollisionShape2D" parent="Puddle"]
-position = Vector2( 1110, 443 )
-shape = SubResource( 6 )
+[node name="CaminhaoNew" type="Sprite" parent="Truck"]
+position = Vector2( 5, 11 )
+scale = Vector2( 2.19531, 2.19531 )
+texture = ExtResource( 2 )
 
 [node name="Hole" type="KinematicBody2D" parent="."]
 script = ExtResource( 10 )
 
-[node name="Hole" type="Sprite" parent="Hole"]
-position = Vector2( 1122, 553 )
-texture = ExtResource( 8 )
+[node name="HoleNew" type="Sprite" parent="Hole"]
+position = Vector2( 740, 420 )
+scale = Vector2( 6.86786, 6.86786 )
+texture = ExtResource( 6 )
 
 [node name="HoleCollision" type="CollisionShape2D" parent="Hole"]
-position = Vector2( 1124, 550 )
+position = Vector2( 1109, 556 )
 shape = SubResource( 7 )
