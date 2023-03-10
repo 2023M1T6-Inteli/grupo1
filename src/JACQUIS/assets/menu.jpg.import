@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Armazém.png-56517387a34f2e9883fb06982ae60d7e.stex"
+path="res://.import/menu.jpg-a7f183f0d28c225ed527af04a6522c74.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Armazém.png"
-dest_files=[ "res://.import/Armazém.png-56517387a34f2e9883fb06982ae60d7e.stex" ]
+source_file="res://assets/menu.jpg"
+dest_files=[ "res://.import/menu.jpg-a7f183f0d28c225ed527af04a6522c74.stex" ]
 
 [params]
 

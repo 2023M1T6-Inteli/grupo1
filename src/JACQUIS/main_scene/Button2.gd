@@ -12,6 +12,14 @@ func _ready():
 
 
 
+
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://Instructions_scene/Instructions_scene.tscn")
+	pass
+
+
 func _on_Button2_pressed():
 	get_tree().change_scene("res://main_scene/Menu.tscn")
-	pass
+	pass # Replace with function body.

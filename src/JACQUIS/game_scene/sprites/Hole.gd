@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
-var moving = false
-const ROW_XVALS = { 0: 302, 1: 411, 3: 527}
+var moving = true
 var sprite_speed = 225.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

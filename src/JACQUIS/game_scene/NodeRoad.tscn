@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://game_scene/ParallaxBackground.gd" type="Script" id=1]
 [ext_resource path="res://assets/truck.png" type="Texture" id=2]
@@ -6,94 +6,76 @@
 [ext_resource path="res://assets/backgroundRoad.png" type="Texture" id=4]
 [ext_resource path="res://game_scene/sprites/Car.gd" type="Script" id=5]
 [ext_resource path="res://assets/car.png" type="Texture" id=6]
-[ext_resource path="res://assets/puddle.png" type="Texture" id=7]
-[ext_resource path="res://assets/hole.png" type="Texture" id=8]
-[ext_resource path="res://game_scene/sprites/Puddle.gd" type="Script" id=9]
+[ext_resource path="res://assets/Hole_new.png" type="Texture" id=7]
+[ext_resource path="res://classic_memesbruh03.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://game_scene/sprites/Hole.gd" type="Script" id=10]
 
 [sub_resource type="GDScript" id=3]
 script/source = "extends Node2D
 
-var ranObstacleChoice = false
+var score = 0
+
+
 
 func _process(delta):
-	var currentSecond = int(floor(OS.get_ticks_msec() / 1000.0))
-
-	# Make ranObstacleChoice false if we're in an odd second
-	if (currentSecond % 2 != 0 and ranObstacleChoice):
-		ranObstacleChoice = false
-
-	# Executes every 2 seconds
-	if (currentSecond % 2 == 0 and not ranObstacleChoice):
-		# Chooses the obstacles for 2 rows, leaving 1 null
-		var rowsObstacles = { 0: null, 1: null, 2: null}
-		for i in _unique_random(0, 2, 2):
-			var randomObstacle = _random_obstacle()
-			while rowsObstacles.has(randomObstacle):
-				randomObstacle = _random_obstacle()
-			rowsObstacles[i] = randomObstacle
-			
-		_add_obstacles_to_rows(rowsObstacles)
-		ranObstacleChoice = true
-
-# Escolhe n números aleatórios entre 'from' e 'to' sem repetições
-func _unique_random(from, to, n):
-	# Starts the Randomizer
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
+	if $Hole.position.x <-256:
+		_on_Timer2_timeout()
 	
-	var numbers = []
+
+
+func _on_Timer2_timeout():
+	var randomObstacle = RandomNumberGenerator.new()
+	randomObstacle.randomize()
+	var posicaoObstaculo = randomObstacle.randi_range(1,5)
 	
-	# Ensures we're only generating n numbers
-	while len(numbers) < n:
-		var randomNumber = rng.randi_range(from, to)
+	if posicaoObstaculo == 1:
+		$Car.position = $Position2D.position
+		$Hole.position = $Position2D2.position
+	
+	elif posicaoObstaculo == 2:
+		$Car.position = $Position2D2.position
+		$Hole.position = $Position2D3.position
 		
-		# Keep regenerating number until it's unique
-		while numbers.has(randomNumber):
-			randomNumber = rng.randi_range(from, to)
-		numbers.append(randomNumber)
-
-	return numbers
-
-# Escolhe n números aleatórios entre 'from' e 'to' sem repetições
-func _random_obstacle():
-	# Starts the Randomizer
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
+	elif posicaoObstaculo == 3:
+		$Car.position = $Position2D3.position
+		$Hole.position = $Position2D.position
 	
-	var availableObstacles = [\"hole\", \"puddle\", \"car\"]
-	return availableObstacles[rng.randi_range(0, 2)]
+	elif posicaoObstaculo == 4:
+		$Car.position = $Position2D2.position
+		$Hole.position = $Position2D.position
+		
+	elif posicaoObstaculo == 5:
+		$Car.position = $Position2D3.position
+		$Hole.position = $Position2D2.position
+	
+	else:
+		pass
+	
+ # Replace with function body.
 
-func _add_obstacles_to_rows(rowsObstacles):
-	print(rowsObstacles)
-	for k in rowsObstacles:
-		var v = rowsObstacles[k]
-		if (v != null):
-			if (v == \"hole\"):
-				$Hole.moving = true
-			elif (v == \"puddle\"):
-				$Puddle.moving = true
-			elif (v == \"car\"):
-				$Car.moving = true
+
+func _on_Timer_timeout():
+	$Score.text= (str(score))
+	score += 1 # Replace with function body.
 "
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 512, 131 )
+extents = Vector2( 512, 155.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 513.375, 0.375 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 91.75, 41.5 )
-
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 80.5, 46 )
+extents = Vector2( 60.5, 35.5 )
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 63, 40.75 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 66.9375, 32 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 79, 27.75 )
+extents = Vector2( 48.5, 13.25 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 8 )
 
 [node name="NodeRoad" type="Node2D"]
 position = Vector2( 5, 2 )
@@ -104,11 +86,11 @@ script = ExtResource( 1 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 z_as_relative = false
-motion_mirroring = Vector2( 1024, 0 )
+motion_mirroring = Vector2( 1050, 0 )
 
 [node name="backgroundRoad" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -41.7838, 459.239 )
-scale = Vector2( 5.45601, 8.4879 )
+position = Vector2( -65.6826, 463.783 )
+scale = Vector2( 8.57958, 8.57958 )
 texture = ExtResource( 4 )
 offset = Vector2( 102.724, -19.1231 )
 
@@ -116,56 +98,85 @@ offset = Vector2( 102.724, -19.1231 )
 position = Vector2( 3, -5 )
 
 [node name="TopCollision" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 504, 134 )
+position = Vector2( 504, 158.5 )
 shape = SubResource( 1 )
 
 [node name="BottomCollision" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 509.625, 596.625 )
 shape = SubResource( 4 )
 
+[node name="Car" type="KinematicBody2D" parent="."]
+position = Vector2( 1093, 366 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Car" type="Sprite" parent="Car"]
+position = Vector2( 0, 1.00002 )
+scale = Vector2( 1.91347, 2.26515 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="CarCollisionShape" type="CollisionShape2D" parent="Car"]
+position = Vector2( 1, -1 )
+shape = SubResource( 5 )
+
 [node name="Truck" type="KinematicBody2D" parent="."]
-position = Vector2( 64, 442 )
+position = Vector2( 100, 452 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="truck" type="Sprite" parent="Truck"]
-position = Vector2( 151, 107 )
-scale = Vector2( 1.61171, 1.77682 )
+position = Vector2( 2, -1 )
+scale = Vector2( 1.84417, 2.03309 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
-position = Vector2( 150, 106 )
 shape = SubResource( 2 )
 
-[node name="Car" type="KinematicBody2D" parent="."]
-script = ExtResource( 5 )
-
-[node name="Car" type="Sprite" parent="Car"]
-position = Vector2( 1101, 356 )
-scale = Vector2( 2.29104, 2.71212 )
-texture = ExtResource( 6 )
-
-[node name="CarCollisionShape" type="CollisionShape2D" parent="Car"]
-position = Vector2( 1104, 355 )
-shape = SubResource( 5 )
-
-[node name="Puddle" type="KinematicBody2D" parent="."]
-script = ExtResource( 9 )
-
-[node name="Puddle" type="Sprite" parent="Puddle"]
-position = Vector2( 1109, 442 )
-texture = ExtResource( 7 )
-
-[node name="PuddleCollision" type="CollisionShape2D" parent="Puddle"]
-position = Vector2( 1110, 443 )
-shape = SubResource( 6 )
-
 [node name="Hole" type="KinematicBody2D" parent="."]
+position = Vector2( 1086, 548 )
 script = ExtResource( 10 )
-
-[node name="Hole" type="Sprite" parent="Hole"]
-position = Vector2( 1122, 553 )
-texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="HoleCollision" type="CollisionShape2D" parent="Hole"]
-position = Vector2( 1124, 550 )
+position = Vector2( 0.5, -0.75 )
 shape = SubResource( 7 )
+
+[node name="HoleNew" type="Sprite" parent="Hole"]
+position = Vector2( -254, -98 )
+scale = Vector2( 4.8817, 4.8817 )
+texture = ExtResource( 7 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.204
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Score" type="Label" parent="."]
+margin_left = 50.0
+margin_top = 23.0
+margin_right = 74.0
+margin_bottom = 34.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 8 )
+clip_text = true
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 1180, 366 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( 1180, 459 )
+
+[node name="Position2D3" type="Position2D" parent="."]
+position = Vector2( 1180, 555 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

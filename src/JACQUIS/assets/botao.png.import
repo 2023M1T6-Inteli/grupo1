@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Armazém.png-56517387a34f2e9883fb06982ae60d7e.stex"
+path="res://.import/botao.png-1c9a4f9445e98dd28ed038babb727b36.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Armazém.png"
-dest_files=[ "res://.import/Armazém.png-56517387a34f2e9883fb06982ae60d7e.stex" ]
+source_file="res://assets/botao.png"
+dest_files=[ "res://.import/botao.png-1c9a4f9445e98dd28ed038babb727b36.stex" ]
 
 [params]
 

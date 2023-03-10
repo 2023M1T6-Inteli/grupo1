@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Armazém.png-56517387a34f2e9883fb06982ae60d7e.stex"
+path="res://.import/carro_vermelho.png-c6514a53ff3e5beb3028896214244a68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Armazém.png"
-dest_files=[ "res://.import/Armazém.png-56517387a34f2e9883fb06982ae60d7e.stex" ]
+source_file="res://assets/carro_vermelho.png"
+dest_files=[ "res://.import/carro_vermelho.png-c6514a53ff3e5beb3028896214244a68.stex" ]
 
 [params]
 
