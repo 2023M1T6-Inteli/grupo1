@@ -106,7 +106,7 @@ position = Vector2( 509.625, 596.625 )
 shape = SubResource( 4 )
 
 [node name="Car" type="KinematicBody2D" parent="."]
-position = Vector2( 1093, 366 )
+position = Vector2( 1175, 364 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -170,7 +170,7 @@ custom_fonts/font = SubResource( 8 )
 clip_text = true
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 1180, 366 )
+position = Vector2( 1180, 374 )
 
 [node name="Position2D2" type="Position2D" parent="."]
 position = Vector2( 1180, 459 )

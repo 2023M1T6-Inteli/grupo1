@@ -4,6 +4,7 @@ export (float) var scrolling_speed = 225.0
 # Scrolls the background by an offset on X
 func scrollBackground(offset):
 	scroll_offset.x -= offset
+	
 
 func _process(delta):
 	_increaseScrollingSpeed(delta)

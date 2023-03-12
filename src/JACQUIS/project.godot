@@ -17,7 +17,6 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/fullscreen=true
 window/per_pixel_transparency/allowed=true
 window/stretch/mode="viewport"
 

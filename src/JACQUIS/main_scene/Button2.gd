@@ -14,12 +14,12 @@ func _ready():
 
 
 
-
+#muda de cena quando o botão é pressionado
 func _on_Button_pressed():
 	get_tree().change_scene("res://Instructions_scene/Instructions_scene.tscn")
 	pass
 
-
+#muda de cena quando o botão é pressionada
 func _on_Button2_pressed():
 	get_tree().change_scene("res://main_scene/Menu.tscn")
 	pass # Replace with function body.
