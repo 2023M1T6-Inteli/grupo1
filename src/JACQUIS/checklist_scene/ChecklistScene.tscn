@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/background.checklist.png" type="Texture" id=1]
 [ext_resource path="res://assets/Checklist.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/Botão conferir.png" type="Texture" id=6]
 [ext_resource path="res://assets/Jacquis/Jacquis.boné.esq.png" type="Texture" id=7]
 [ext_resource path="res://assets/Balao b.png" type="Texture" id=8]
+[ext_resource path="res://checklist_scene/1C96E44B-EABB-4109-AA26-8F16ABE1898F.jpg" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 4 )
@@ -37,6 +38,11 @@ font_data = ExtResource( 4 )
 scale = Vector2( 1, 0.987097 )
 script = ExtResource( 3 )
 
+[node name="BotãoConferir" type="Sprite" parent="."]
+position = Vector2( 691, 522.745 )
+scale = Vector2( 0.187918, 0.187919 )
+texture = ExtResource( 6 )
+
 [node name="Backgroundchecklist" type="Sprite" parent="."]
 position = Vector2( 515, 303.217 )
 scale = Vector2( 0.936336, 0.941668 )
@@ -44,6 +50,11 @@ texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Backgroundnovo" type="Sprite" parent="."]
+position = Vector2( 516.5, 305.441 )
+scale = Vector2( 0.787396, 0.809107 )
+texture = ExtResource( 9 )
 
 [node name="Checklist" type="Sprite" parent="."]
 position = Vector2( 280, 291 )
@@ -60,9 +71,9 @@ margin_bottom = 14.0
 [node name="Label" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 margin_left = 202.0
-margin_top = 144.0
+margin_top = 146.895
 margin_right = 451.0
-margin_bottom = 172.0
+margin_bottom = 174.895
 custom_fonts/font = SubResource( 1 )
 text = "Conferir a documentação"
 
@@ -70,9 +81,9 @@ text = "Conferir a documentação"
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0.0666667, 0.00784314, 0.00784314, 1 )
 margin_left = 203.0
-margin_top = 193.0
+margin_top = 191.471
 margin_right = 455.0
-margin_bottom = 214.0
+margin_bottom = 212.471
 custom_fonts/font = SubResource( 2 )
 text = "Dirigir cansado"
 
@@ -80,7 +91,7 @@ text = "Dirigir cansado"
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 202.0
-margin_top = 242.0
+margin_top = 238.0
 margin_right = 459.0
 margin_bottom = 263.0
 custom_fonts/font = SubResource( 3 )
@@ -89,7 +100,7 @@ text = "Conferir o limite de carga"
 [node name="Label4" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 margin_left = 204.0
-margin_top = 288.0
+margin_top = 285.0
 margin_right = 430.0
 margin_bottom = 309.0
 custom_fonts/font = SubResource( 4 )
@@ -98,18 +109,18 @@ text = "Beber uma cerveja"
 [node name="Label5" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 margin_left = 203.0
-margin_top = 339.0
+margin_top = 335.327
 margin_right = 478.0
-margin_bottom = 360.0
+margin_bottom = 360.327
 custom_fonts/font = SubResource( 6 )
 text = "Conferir o nível de gasolina"
 
 [node name="Label6" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 207.0
-margin_top = 387.0
-margin_right = 375.0
-margin_bottom = 408.0
+margin_left = 206.0
+margin_top = 385.98
+margin_right = 374.0
+margin_bottom = 406.98
 custom_fonts/font = SubResource( 5 )
 text = "Viajar à 90km/h"
 
@@ -165,13 +176,8 @@ rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 7 )
 text = "Conferir"
 
-[node name="BotãoConferir" type="Sprite" parent="Button"]
-position = Vector2( 76.5, 26.3724 )
-scale = Vector2( 0.0939592, 0.0939593 )
-texture = ExtResource( 6 )
-
 [node name="Jacquisbonéesq" type="Sprite" parent="."]
-position = Vector2( 1008.04, 308.982 )
+position = Vector2( 1012.05, 295.815 )
 rotation = -0.261799
 scale = Vector2( 5.21323, 5.21323 )
 texture = ExtResource( 7 )
