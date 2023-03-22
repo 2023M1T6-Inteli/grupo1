@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="JACQUIS"
-run/main_scene="res://scenes/MainScene.tscn"
+run/main_scene="res://scenes/main_scene/MainScene.tscn"
 run/delta_smoothing=false
 config/icon="res://icon.png"
 

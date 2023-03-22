@@ -8,4 +8,4 @@ func _ready():
 
 
 func _on_Btn_Voltar_pressed():
-	get_tree().change_scene("res://scenes/MainScene.tscn")
+	get_tree().change_scene("res://scenes/main_scene/MainScene.tscn")

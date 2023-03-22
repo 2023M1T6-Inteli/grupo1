@@ -11,7 +11,7 @@ func _ready():
 
 
 func _on_Controles_pressed():
-	get_tree().change_scene("res://scenes/Menu.tscn")
+	get_tree().change_scene("res://scenes/controls_scene/Menu.tscn")
 
 
 func _on_Controles_mouse_entered():
