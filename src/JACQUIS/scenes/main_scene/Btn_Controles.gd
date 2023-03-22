@@ -1,15 +1,6 @@
 extends Button
 
 
-
-
-
-func _ready():
-	pass 
-
-
-
-
 func _on_Controles_pressed():
 	get_tree().change_scene("res://scenes/controls_scene/Menu.tscn")
 

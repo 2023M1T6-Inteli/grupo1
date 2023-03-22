@@ -1,14 +1,6 @@
 extends Node2D
 
 
-
-
-func _ready():
-	pass # Replace with function body.
-
-
-
-
 func _on_HSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(1,value)
 	

@@ -14,16 +14,9 @@
 script/source = "extends Node2D
 
 
-func _ready():
-	pass
-
-
 func _process(delta):
 	if $Car.position.x <-256:
 		_on_Timer2_timeout()
-	#if (Global.score)/50 == 0:
-		#get_tree().change_scene(\"res://scenes/velocimetro.tscn\")
-	
 
 
 func _on_Timer2_timeout():
@@ -55,11 +48,6 @@ func _on_Timer2_timeout():
 		$Car.position.y = $Position2D3.position.y
 		$Car.position.x = rand_range(1180,1440)
 		$Hole.position = $Position2D2.position
-	
-	else:
-		pass
-	
- # Replace with function body.
 
 
 func _on_Timer_timeout():

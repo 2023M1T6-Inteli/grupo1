@@ -1,17 +1,6 @@
 extends Button
 
 
-
-
-func _ready():
-	pass 
-
-
-
-func _process(delta):
-	pass
-
-
 func _on_Jogar_pressed():
 	get_tree().change_scene("res://scenes/name_scene/PlayerName.tscn")
 
