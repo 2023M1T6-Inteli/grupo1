@@ -2,7 +2,7 @@ extends Button
 
 
 func _on_Controles_pressed():
-	get_tree().change_scene("res://scenes/controls_scene/Menu.tscn")
+	get_tree().change_scene("res://scenes/controls_scene/controls_scene.tscn")
 
 
 func _on_Controles_mouse_entered():

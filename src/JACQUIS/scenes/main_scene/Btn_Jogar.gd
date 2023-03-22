@@ -2,7 +2,7 @@ extends Button
 
 
 func _on_Jogar_pressed():
-	get_tree().change_scene("res://scenes/name_scene/PlayerName.tscn")
+	get_tree().change_scene("res://scenes/name_scene/name_scene.tscn")
 
 
 func _on_Jogar_mouse_entered():

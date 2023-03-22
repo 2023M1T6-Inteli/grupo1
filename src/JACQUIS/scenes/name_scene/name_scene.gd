@@ -9,5 +9,5 @@ func _ready():
 func _on_Button_pressed():
 	Global.nome = $LineEdit.text 	
 	print(Global.nome)
-	get_tree().change_scene("res://scenes/intro_scene/Instructions_scene.tscn")
+	get_tree().change_scene("res://scenes/intro_scene/intro_scene.tscn")
 

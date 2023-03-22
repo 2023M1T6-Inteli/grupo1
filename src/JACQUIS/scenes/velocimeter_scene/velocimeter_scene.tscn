@@ -2,8 +2,8 @@
 
 [ext_resource path="res://assets/velocimetro.png" type="Texture" id=1]
 [ext_resource path="res://assets/ponteiro.png" type="Texture" id=2]
-[ext_resource path="res://scenes/velocimeter_scene/Ponteiro.gd" type="Script" id=3]
-[ext_resource path="res://scenes/velocimeter_scene/velocimetro.gd" type="Script" id=4]
+[ext_resource path="res://scenes/velocimeter_scene/pointer.gd" type="Script" id=3]
+[ext_resource path="res://scenes/velocimeter_scene/velocimenter_scene.gd" type="Script" id=4]
 
 [node name="velocimetro" type="Node2D"]
 script = ExtResource( 4 )

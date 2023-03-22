@@ -2,7 +2,7 @@ extends Button
 
 
 func _on_btn_config_pressed():
-	get_tree().change_scene("res://scenes/configs_scene/config.tscn")
+	get_tree().change_scene("res://scenes/configs_scene/configs_scene.tscn")
 
 
 func _on_btn_config_mouse_entered():

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scenes/configs_scene/Btn_Voltar.gd" type="Script" id=1]
+[ext_resource path="res://scenes/configs_scene/btn_voltar.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/botao.png" type="Texture" id=3]
-[ext_resource path="res://scenes/configs_scene/config.gd" type="Script" id=4]
+[ext_resource path="res://scenes/configs_scene/configs_scene.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://scenes/minigame_hole/game_scene/HoleScene.gd" type="Script" id=1]
+[ext_resource path="res://scenes/minigame_hole/game_scene/game_scene.gd" type="Script" id=1]
 [ext_resource path="res://assets/Interior do caminhao com fundo.png" type="Texture" id=2]
 [ext_resource path="res://assets/semafaro_vazio.png" type="Texture" id=3]
 [ext_resource path="res://assets/semafaro_amarela.png" type="Texture" id=4]
