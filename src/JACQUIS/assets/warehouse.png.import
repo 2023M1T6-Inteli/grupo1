@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Armazém.png-56517387a34f2e9883fb06982ae60d7e.stex"
+path="res://.import/warehouse.png-c07d64f5b45d9856dfb6b4d3c4350d21.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Armazém.png"
-dest_files=[ "res://.import/Armazém.png-56517387a34f2e9883fb06982ae60d7e.stex" ]
+source_file="res://assets/warehouse.png"
+dest_files=[ "res://.import/warehouse.png-c07d64f5b45d9856dfb6b4d3c4350d21.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

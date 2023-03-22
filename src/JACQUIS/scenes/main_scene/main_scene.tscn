@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/main_scene/btn_jogar.gd" type="Script" id=1]
 [ext_resource path="res://scenes/main_scene/main_scene.gd" type="Script" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://scenes/main_scene/btn_controles.gd" type="Script" id=7]
 [ext_resource path="res://assets/botao_pequeno.png" type="Texture" id=8]
 [ext_resource path="res://assets/config.png" type="Texture" id=9]
-[ext_resource path="res://assets/background-tela-inical.png" type="Texture" id=10]
 [ext_resource path="res://assets/placaJaquis.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=3]
@@ -22,19 +21,14 @@ font_data = ExtResource( 3 )
 position = Vector2( 0, 1 )
 script = ExtResource( 2 )
 
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( 512, 300 )
-scale = Vector2( 0.150588, 0.176471 )
-texture = ExtResource( 10 )
-
 [node name="BgTelaInicio" type="Sprite" parent="."]
-position = Vector2( 598, 300.5 )
-scale = Vector2( 1.24792, 1.24792 )
+position = Vector2( 511.999, 300.5 )
+scale = Vector2( 1.06875, 1.24792 )
 texture = ExtResource( 6 )
 
 [node name="PlacaJaquis" type="Sprite" parent="."]
-position = Vector2( 512.015, 111.523 )
-scale = Vector2( 0.360392, 0.380954 )
+position = Vector2( 476.493, 116.5 )
+scale = Vector2( 0.370004, 0.408621 )
 texture = ExtResource( 11 )
 
 [node name="Btn_Controles" type="Button" parent="."]
