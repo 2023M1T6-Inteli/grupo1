@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/intro_scene/intro_scene.gd" type="Script" id=1]
 [ext_resource path="res://assets/road.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scenes/intro_scene/btn_comecar.gd" type="Script" id=7]
 [ext_resource path="res://assets/Jacquis/Jacquis.feliz.esq.png" type="Texture" id=8]
+[ext_resource path="res://assets/truck.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 6 )
@@ -66,5 +67,10 @@ clip_text = true
 position = Vector2( 624.5, 272.5 )
 scale = Vector2( 0.842, 0.866 )
 texture = ExtResource( 4 )
+
+[node name="Truck" type="Sprite" parent="."]
+position = Vector2( 87, 456 )
+scale = Vector2( 3.81111, 3.81111 )
+texture = ExtResource( 9 )
 
 [connection signal="pressed" from="Btn_comecar" to="Btn_comecar" method="_on_Button_pressed"]

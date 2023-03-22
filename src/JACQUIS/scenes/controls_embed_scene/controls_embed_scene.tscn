@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/instructions_background.jpg" type="Texture" id=2]
+[ext_resource path="res://scenes/controls_embed_scene/btn_next.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ControlesDoJogo" type="Sprite" parent="."]
+position = Vector2( 522, 295 )
+scale = Vector2( 0.552778, 0.552778 )
+
+[node name="InstructionsBackground" type="Sprite" parent="ControlesDoJogo"]
+position = Vector2( -13.1294, 8.79773 )
+scale = Vector2( 1.01729, 1.04462 )
+texture = ExtResource( 2 )
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 503.0
+margin_right = 521.0
+margin_bottom = 541.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "Continuar"
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]
