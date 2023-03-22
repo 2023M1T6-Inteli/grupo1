@@ -1,0 +1,125 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scenes/main_scene/btn_jogar.gd" type="Script" id=1]
+[ext_resource path="res://scenes/main_scene/main_scene.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/classic_memesbruh03.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/main_scene/btn_config.gd" type="Script" id=4]
+[ext_resource path="res://assets/botao.png" type="Texture" id=5]
+[ext_resource path="res://assets/BG_telaInicio.png" type="Texture" id=6]
+[ext_resource path="res://scenes/main_scene/btn_controles.gd" type="Script" id=7]
+[ext_resource path="res://assets/botao_pequeno.png" type="Texture" id=8]
+[ext_resource path="res://assets/config.png" type="Texture" id=9]
+[ext_resource path="res://assets/background-tela-inical.png" type="Texture" id=10]
+[ext_resource path="res://assets/placaJaquis.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 0, 1 )
+script = ExtResource( 2 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.150588, 0.176471 )
+texture = ExtResource( 10 )
+
+[node name="BgTelaInicio" type="Sprite" parent="."]
+position = Vector2( 598, 300.5 )
+scale = Vector2( 1.24792, 1.24792 )
+texture = ExtResource( 6 )
+
+[node name="PlacaJaquis" type="Sprite" parent="."]
+position = Vector2( 521, 122 )
+scale = Vector2( 1.28623, 1.05973 )
+texture = ExtResource( 11 )
+
+[node name="Btn_Controles" type="Button" parent="."]
+margin_left = 593.0
+margin_top = 371.0
+margin_right = 930.0
+margin_bottom = 444.0
+rect_pivot_offset = Vector2( -443, -224 )
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SprtBotao" type="Sprite" parent="Btn_Controles"]
+position = Vector2( 148, 44 )
+scale = Vector2( 1.88462, 1.88462 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Btn_Controles"]
+margin_left = 7.0
+margin_top = -1.0
+margin_right = 102.0
+margin_bottom = 18.0
+rect_scale = Vector2( 3.5, 3.5 )
+custom_fonts/font = SubResource( 3 )
+text = "Controles"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="Btn_Jogar" type="Button" parent="."]
+margin_left = 55.0
+margin_top = 370.0
+margin_right = 387.0
+margin_bottom = 437.0
+rect_pivot_offset = Vector2( -443, -224 )
+flat = true
+clip_text = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SprtBotao" type="Sprite" parent="Btn_Jogar"]
+position = Vector2( 144, 40 )
+scale = Vector2( 1.88462, 1.88462 )
+texture = ExtResource( 5 )
+
+[node name="Label2" type="Label" parent="Btn_Jogar"]
+margin_top = 6.0
+margin_right = 95.0
+margin_bottom = 20.0
+rect_scale = Vector2( 3.5, 3.5 )
+custom_fonts/font = SubResource( 2 )
+text = "Jogar"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="btn_config" type="Button" parent="."]
+margin_left = 18.0
+margin_top = 11.0
+margin_right = 81.0
+margin_bottom = 67.0
+flat = true
+script = ExtResource( 4 )
+
+[node name="BotaoPequeno" type="Sprite" parent="btn_config"]
+position = Vector2( 32, 28 )
+scale = Vector2( 1.4486, 1.46863 )
+texture = ExtResource( 8 )
+
+[node name="Config" type="Sprite" parent="btn_config"]
+position = Vector2( 31, 28 )
+scale = Vector2( 0.785714, 0.785714 )
+texture = ExtResource( 9 )
+
+[connection signal="mouse_entered" from="Btn_Controles" to="Btn_Controles" method="_on_Controles_mouse_entered"]
+[connection signal="mouse_exited" from="Btn_Controles" to="Btn_Controles" method="_on_Controles_mouse_exited"]
+[connection signal="pressed" from="Btn_Controles" to="Btn_Controles" method="_on_Controles_pressed"]
+[connection signal="mouse_entered" from="Btn_Jogar" to="Btn_Jogar" method="_on_Jogar_mouse_entered"]
+[connection signal="mouse_exited" from="Btn_Jogar" to="Btn_Jogar" method="_on_Jogar_mouse_exited"]
+[connection signal="pressed" from="Btn_Jogar" to="Btn_Jogar" method="_on_Jogar_pressed"]
+[connection signal="mouse_entered" from="btn_config" to="btn_config" method="_on_btn_config_mouse_entered"]
+[connection signal="mouse_exited" from="btn_config" to="btn_config" method="_on_btn_config_mouse_exited"]
+[connection signal="pressed" from="btn_config" to="btn_config" method="_on_btn_config_pressed"]

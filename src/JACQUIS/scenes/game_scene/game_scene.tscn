@@ -1,0 +1,184 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/truck.png" type="Texture" id=2]
+[ext_resource path="res://scenes/game_scene/truck.gd" type="Script" id=3]
+[ext_resource path="res://assets/backgroundRoad.png" type="Texture" id=4]
+[ext_resource path="res://scenes/game_scene/car.gd" type="Script" id=5]
+[ext_resource path="res://assets/car.png" type="Texture" id=6]
+[ext_resource path="res://assets/Hole_new.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/classic_memesbruh03.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://scenes/game_scene/parallax_layer.gd" type="Script" id=9]
+[ext_resource path="res://scenes/game_scene/hole.gd" type="Script" id=10]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Node2D
+
+
+func _process(delta):
+	if $Car.position.x <-256:
+		_on_Timer2_timeout()
+
+
+func _on_Timer2_timeout():
+	var randomObstacle = RandomNumberGenerator.new()
+	randomObstacle.randomize()
+	var posicaoObstaculo = randomObstacle.randi_range(1,5)
+	
+	if posicaoObstaculo == 1:
+		$Car.position.y = $Position2D.position.y
+		$Car.position.x = rand_range(1180,1440)
+		$Hole.position = $Position2D2.position
+	
+	elif posicaoObstaculo == 2:
+		$Car.position.y = $Position2D2.position.y
+		$Car.position.x = rand_range(1180,1440)
+		$Hole.position = $Position2D3.position
+		
+	elif posicaoObstaculo == 3:
+		$Car.position.y = $Position2D3.position.y
+		$Car.position.x = rand_range(1180,1440)
+		$Hole.position = $Position2D.position
+	
+	elif posicaoObstaculo == 4:
+		$Car.position.y = $Position2D2.position.y
+		$Car.position.x = rand_range(1180,1440)
+		$Hole.position = $Position2D.position
+		
+	elif posicaoObstaculo == 5:
+		$Car.position.y = $Position2D3.position.y
+		$Car.position.x = rand_range(1180,1440)
+		$Hole.position = $Position2D2.position
+
+
+func _on_Timer_timeout():
+	$Score.text= (str(Global.score))
+	Global.score += 1 # Replace with function body.
+"
+
+[sub_resource type="Shader" id=9]
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = SubResource( 9 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 512, 155.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 513.375, 0.375 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 60.5, 35.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 66.9375, 32 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 48.5, 13.25 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 8 )
+
+[node name="NodeRoad" type="Node2D"]
+position = Vector2( 5, 2 )
+script = SubResource( 3 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+z_as_relative = false
+motion_mirroring = Vector2( 1050, 0 )
+script = ExtResource( 9 )
+
+[node name="backgroundRoad" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+material = SubResource( 10 )
+position = Vector2( -884, 167 )
+scale = Vector2( 8.57958, 8.57958 )
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( 102.724, -19.1231 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 3, -5 )
+
+[node name="TopCollision" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 504, 158.5 )
+shape = SubResource( 1 )
+
+[node name="BottomCollision" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 509.625, 596.625 )
+shape = SubResource( 4 )
+
+[node name="Car" type="KinematicBody2D" parent="."]
+position = Vector2( 1175, 364 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Car" type="Sprite" parent="Car"]
+position = Vector2( 0, 1.00002 )
+scale = Vector2( 1.91347, 2.26515 )
+texture = ExtResource( 6 )
+
+[node name="CarCollisionShape" type="CollisionShape2D" parent="Car"]
+position = Vector2( 1, -1 )
+shape = SubResource( 5 )
+
+[node name="Truck" type="KinematicBody2D" parent="."]
+position = Vector2( 100, 452 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="truck" type="Sprite" parent="Truck"]
+position = Vector2( 2, -1 )
+scale = Vector2( 1.84417, 2.03309 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
+shape = SubResource( 2 )
+
+[node name="Hole" type="KinematicBody2D" parent="."]
+position = Vector2( 1419, 562 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="HoleCollision" type="CollisionShape2D" parent="Hole"]
+position = Vector2( 0.5, -0.75 )
+shape = SubResource( 7 )
+
+[node name="HoleNew" type="Sprite" parent="Hole"]
+position = Vector2( -254, -98 )
+scale = Vector2( 4.8817, 4.8817 )
+texture = ExtResource( 7 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.204
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Score" type="Label" parent="."]
+margin_left = 50.0
+margin_top = 23.0
+margin_right = 74.0
+margin_bottom = 34.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 8 )
+clip_text = true
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 1180, 374 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( 1180, 459 )
+
+[node name="Position2D3" type="Position2D" parent="."]
+position = Vector2( 1180, 555 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

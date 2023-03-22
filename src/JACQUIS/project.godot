@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="JACQUIS"
-run/main_scene="res://scenes/MainScene.tscn"
+run/main_scene="res://scenes/main_scene/main_scene.tscn"
 run/delta_smoothing=false
 config/icon="res://icon.png"
 
@@ -21,8 +21,8 @@ default_bus_layout="res://Audio/default_bus_layout.tres"
 
 [autoload]
 
-MusicControler="*res://scenes/musicControler.tscn"
-Global="*res://Scripts/Global.gd"
+MusicControler="*res://Audio/musicControler.tscn"
+Global="*res://Global.gd"
 
 [display]
 
