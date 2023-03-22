@@ -13,7 +13,7 @@ func _process(delta):
 
 
 func _on_Jogar_pressed():
-	get_tree().change_scene("res://scenes/PlayerName.tscn")
+	get_tree().change_scene("res://scenes/name_scene/PlayerName.tscn")
 
 
 func _on_Jogar_mouse_entered():
