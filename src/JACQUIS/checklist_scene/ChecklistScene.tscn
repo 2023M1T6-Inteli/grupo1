@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/background.checklist.png" type="Texture" id=1]
 [ext_resource path="res://assets/Checklist.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/Jacquis/Jacquis.boné.esq.png" type="Texture" id=7]
 [ext_resource path="res://assets/Balao b.png" type="Texture" id=8]
 [ext_resource path="res://checklist_scene/1C96E44B-EABB-4109-AA26-8F16ABE1898F.jpg" type="Texture" id=9]
+[ext_resource path="res://assets/botao.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 4 )
@@ -34,6 +35,12 @@ font_data = ExtResource( 4 )
 [sub_resource type="DynamicFont" id=8]
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFont" id=9]
+size = 33
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
 [node name="Node2D" type="Node2D"]
 scale = Vector2( 1, 0.987097 )
 script = ExtResource( 3 )
@@ -52,7 +59,7 @@ __meta__ = {
 }
 
 [node name="Backgroundnovo" type="Sprite" parent="."]
-position = Vector2( 516.5, 305.441 )
+position = Vector2( 518, 304.935 )
 scale = Vector2( 0.787396, 0.809107 )
 texture = ExtResource( 9 )
 
@@ -168,10 +175,10 @@ margin_bottom = 413.0
 rect_scale = Vector2( 1.5, 1.5 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 538.0
-margin_top = 470.0
-margin_right = 664.0
-margin_bottom = 501.0
+margin_left = 562.0
+margin_top = 471.0
+margin_right = 673.0
+margin_bottom = 498.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 7 )
 text = "Conferir"
@@ -228,6 +235,22 @@ texture = ExtResource( 5 )
 position = Vector2( 190, 347.484 )
 scale = Vector2( 0.0287584, 0.0285394 )
 texture = ExtResource( 5 )
+
+[node name="Botao" type="Sprite" parent="."]
+position = Vector2( 656, 504.51 )
+scale = Vector2( 1.63323, 1.63323 )
+texture = ExtResource( 10 )
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 541.0
+margin_top = 475.0
+margin_right = 810.0
+margin_bottom = 524.0
+custom_fonts/font = SubResource( 9 )
+text = "Conferir"
+align = 1
+valign = 1
+autowrap = true
 
 [connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
