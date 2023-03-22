@@ -21,8 +21,8 @@ default_bus_layout="res://Audio/default_bus_layout.tres"
 
 [autoload]
 
-MusicControler="*res://scenes/musicControler.tscn"
-Global="*res://Scripts/Global.gd"
+MusicControler="*res://Audio/musicControler.tscn"
+Global="*res://Global.gd"
 
 [display]
 

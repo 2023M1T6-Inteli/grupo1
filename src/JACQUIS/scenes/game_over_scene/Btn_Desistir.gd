@@ -1,4 +1,4 @@
-extends Node2D
+extends Button
 
 
 # Declare member variables here. Examples:
@@ -8,7 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.score += 1
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,3 +16,5 @@ func _ready():
 #	pass
 
 
+func _on_Btn_Desistir_pressed():
+	get_tree().change_scene("res://scenes/main_scene/MainScene.tscn")

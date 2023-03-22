@@ -27,6 +27,6 @@ func _process(delta):
 func _on_Timer_timeout():
 	print(self.rotation_degrees)
 	if self.rotation_degrees > (-25) and self.rotation_degrees < (25):
-		get_tree().change_scene("res://scenes/NodeRoad.tscn")
+		get_tree().change_scene("res://scenes/game_scene/NodeRoad.tscn")
 	else:
 		pass
