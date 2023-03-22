@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Btn_Recomecar.gd" type="Script" id=2]
+[ext_resource path="res://assets/botao.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Btn_Desistir.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/gameOver.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 46
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="gameOver" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -14.0
+margin_top = -8.0
+margin_right = 1036.0
+margin_bottom = 611.0
+color = Color( 0.298039, 1, 0.572549, 1 )
+
+[node name="Lbl_GameOver" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 28.0
+margin_right = 1024.0
+margin_bottom = 144.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Over"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 520.0
+margin_top = 142.0
+margin_right = 978.0
+margin_bottom = 572.0
+color = Color( 0.205444, 0.773438, 0.427565, 1 )
+
+[node name="Btn_Recomecar" type="Button" parent="."]
+margin_left = 75.0
+margin_top = 264.0
+margin_right = 396.0
+margin_bottom = 334.0
+rect_pivot_offset = Vector2( 161, 35 )
+flat = true
+script = ExtResource( 2 )
+
+[node name="Botao" type="Sprite" parent="Btn_Recomecar"]
+position = Vector2( 152, 34 )
+scale = Vector2( 1.7892, 1.7892 )
+texture = ExtResource( 3 )
+offset = Vector2( -8, 4 )
+
+[node name="Lbl_Recomecar" type="Label" parent="Btn_Recomecar"]
+margin_left = -1.0
+margin_right = 316.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 2 )
+text = "Recomeçar"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Btn_Desistir" type="Button" parent="."]
+margin_left = 75.0
+margin_top = 384.0
+margin_right = 396.0
+margin_bottom = 454.0
+rect_pivot_offset = Vector2( 161, 35 )
+flat = true
+script = ExtResource( 4 )
+
+[node name="Botao" type="Sprite" parent="Btn_Desistir"]
+position = Vector2( 152, 34 )
+scale = Vector2( 1.7892, 1.7892 )
+texture = ExtResource( 3 )
+offset = Vector2( -8, 4 )
+
+[node name="Lbl_Desistir" type="Label" parent="Btn_Desistir"]
+margin_left = -1.0
+margin_right = 316.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 2 )
+text = "Desistir"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="ranking" type="Label" parent="."]
+margin_left = 525.0
+margin_top = 144.0
+margin_right = 977.0
+margin_bottom = 573.0
+autowrap = true
+clip_text = true
+
+[connection signal="pressed" from="Btn_Recomecar" to="Btn_Recomecar" method="_on_Btn_Recomecar_pressed"]
+[connection signal="pressed" from="Btn_Desistir" to="Btn_Desistir" method="_on_Btn_Desistir_pressed"]

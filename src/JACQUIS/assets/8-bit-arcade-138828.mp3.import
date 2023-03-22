@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8-bit-arcade-138828.mp3-c090f06645c4d7b6dc2e3ca48ea6157e.mp3str"
+
+[deps]
+
+source_file="res://assets/8-bit-arcade-138828.mp3"
+dest_files=[ "res://.import/8-bit-arcade-138828.mp3-c090f06645c4d7b6dc2e3ca48ea6157e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Instructions_scene.gd" type="Script" id=1]
+[ext_resource path="res://assets/background. instruções.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Armazém.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Btn_comecar.gd" type="Script" id=5]
+[ext_resource path="res://assets/Jacquis/Jacquis.feliz.dir.png" type="Texture" id=6]
+[ext_resource path="res://assets/Balao b.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BackgroundInstruções" type="Sprite" parent="."]
+position = Vector2( 552, 300.75 )
+scale = Vector2( 1.01744, 1.07364 )
+texture = ExtResource( 2 )
+
+[node name="Jacquisfelizdir" type="Sprite" parent="BackgroundInstruções"]
+position = Vector2( -322.377, 93.3743 )
+scale = Vector2( 2.96473, 2.96473 )
+texture = ExtResource( 6 )
+
+[node name="BalaoB" type="Sprite" parent="BackgroundInstruções"]
+position = Vector2( -99.6213, 20.7239 )
+scale = Vector2( 4.23334, 3.88657 )
+texture = ExtResource( 7 )
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 282.0
+margin_top = 207.0
+margin_right = 628.0
+margin_bottom = 310.0
+custom_fonts/font = SubResource( 3 )
+text = "Olá caminhoneiro! Sou o Jacquis.
+Vou te instruir durante essa 
+jornada, desenvolvida por alunos do Inteli."
+autowrap = true
+clip_text = true
+
+[node name="Armazém" type="Sprite" parent="."]
+position = Vector2( 785, 271 )
+scale = Vector2( 0.657986, 0.657986 )
+texture = ExtResource( 4 )
+
+[node name="Btn_comecar" type="Button" parent="."]
+margin_left = 818.0
+margin_top = 519.0
+margin_right = 913.0
+margin_bottom = 546.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 2 )
+text = "Começar"
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 710.0
+margin_top = 237.0
+margin_right = 770.0
+margin_bottom = 282.0
+rect_scale = Vector2( 2.5, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "DOCAS
+"
+
+[connection signal="pressed" from="Btn_comecar" to="Btn_comecar" method="_on_Button_pressed"]
