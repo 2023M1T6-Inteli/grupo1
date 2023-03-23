@@ -13,10 +13,12 @@ func _ready():
 	$SemafaroVazio/SemafaroVermelho.modulate.r = 1
 	$SemafaroVazio/SemafaroVermelho.modulate.g = 1
 	$SemafaroVazio/SemafaroVermelho.modulate.b = 1
+	$Celular.visible = false
 
 
 
 func _on_Tmr_Vermelho_timeout():
+	$Celular.visible = true
 	$Tmr_amarelo.start()
 	$SemafaroVazio/SemafaroVermelho.modulate.r = 0.6
 	$SemafaroVazio/SemafaroVermelho.modulate.g = 0.6
