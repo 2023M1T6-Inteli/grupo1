@@ -19,4 +19,4 @@ func _on_btn_submit_pressed():
 	elif $AnimatedSprite.frame < 52:
 		$Label.text = "Ainda cabe mais! Enche mais um pouco..."
 	else:
-		get_tree().change_scene("res://scenes/minigame/hole_scene/hole_scene.tscn")
+		get_tree().change_scene("res://scenes/game_scene/game_scene.tscn")
