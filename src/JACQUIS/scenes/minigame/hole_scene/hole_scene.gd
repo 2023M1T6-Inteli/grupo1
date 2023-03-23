@@ -37,6 +37,6 @@ func _on_tmr_Verde_timeout():
 func _process(delta):
 	if z == 1:
 		if Input.is_action_just_pressed("ui_accept"):
-			get_tree().change_scene("res://scenes/game_scene/game_scene.tscn")
+			get_tree().change_scene("res://scenes/minigame/congrats_hole_scene/congrats_hole_scene.tscn")
 	if z == 2:
 		get_tree().change_scene("res://scenes/game_over_scene/game_over_scene.tscn")
