@@ -138,11 +138,11 @@ scale = Vector2( 0.987415, 1.1901 )
 texture = ExtResource( 102 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 565, 276 )
+position = Vector2( 558, 282 )
 scale = Vector2( 0.480515, 0.50715 )
 frames = SubResource( 1 )
 animation = "Caminhão enchendo "
-frame = 99
+frame = 95
 offset = Vector2( -480.734, 193.237 )
 
 [node name="btn_more" type="Button" parent="."]
@@ -182,13 +182,19 @@ margin_bottom = 159.0
 rect_pivot_offset = Vector2( 68, 45 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Encha o caminhão de clóro até a linha vermelha!"
+text = "Encha o caminhão de clóro até a linha verde!"
 autowrap = true
 
 [node name="Jacquisfelizesq" type="Sprite" parent="."]
 position = Vector2( 898, 287 )
 scale = Vector2( 4.34722, 4.34722 )
 texture = ExtResource( 104 )
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 277.333, 183.5 )
+scale = Vector2( 7.63333, 1.25 )
+points = PoolVector2Array( 0, 0, 9.35131, 0, 10, 0 )
+default_color = Color( 0.12549, 1, 0, 1 )
 
 [connection signal="pressed" from="btn_more" to="." method="_on_btn_more_pressed"]
 [connection signal="pressed" from="btn_less" to="." method="_on_btn_less_pressed"]

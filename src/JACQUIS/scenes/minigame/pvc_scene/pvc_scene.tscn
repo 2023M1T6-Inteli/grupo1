@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://assets/Animação.CaminhãoPVC/CAMINHAOPVC58.png" type="Texture" id=1]
 [ext_resource path="res://assets/Animação.CaminhãoPVC/CAMINHAOPVC1.png" type="Texture" id=2]
@@ -62,6 +62,10 @@
 [ext_resource path="res://assets/Animação.CaminhãoPVC/CAMINHAOPVC22.png" type="Texture" id=60]
 [ext_resource path="res://assets/Animação.CaminhãoPVC/CAMINHAOPVC9.png" type="Texture" id=61]
 [ext_resource path="res://assets/Animação.CaminhãoPVC/CAMINHAOPVC3.png" type="Texture" id=62]
+[ext_resource path="res://Fonts/classic_memesbruh03.ttf" type="DynamicFontData" id=63]
+[ext_resource path="res://scenes/minigame/pvc_scene/pvc_scene.gd" type="Script" id=64]
+[ext_resource path="res://assets/Jacquis/Jacquis.feliz.png" type="Texture" id=65]
+[ext_resource path="res://assets/Balao b.png" type="Texture" id=66]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -81,8 +85,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 63 )
+
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 56 )
+script = ExtResource( 64 )
 
 [node name="Fundominigametombamento" type="Sprite" parent="."]
 position = Vector2( 515, 298.5 )
@@ -90,9 +98,59 @@ scale = Vector2( 0.997096, 1.18218 )
 texture = ExtResource( 24 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 327, 370 )
+position = Vector2( 733.5, 363.188 )
 scale = Vector2( 3.80381, 3.80381 )
 frames = SubResource( 1 )
 animation = "Caminhão.enchendo"
-frame = 4
-playing = true
+frame = 55
+
+[node name="btn_encher" type="Button" parent="."]
+margin_left = 299.5
+margin_top = 198.188
+margin_right = 435.5
+margin_bottom = 277.188
+text = "Encher"
+
+[node name="btn_esvaziar" type="Button" parent="."]
+margin_left = 297.5
+margin_top = 327.188
+margin_right = 433.5
+margin_bottom = 406.188
+text = "Esvaziar"
+
+[node name="btn_submit" type="Button" parent="."]
+margin_left = 73.0
+margin_top = 470.0
+margin_right = 316.0
+margin_bottom = 549.0
+text = "Continuar"
+
+[node name="Jacquisfeliz" type="Sprite" parent="."]
+position = Vector2( 137.5, 299.188 )
+scale = Vector2( 4.15278, 4.15278 )
+texture = ExtResource( 65 )
+
+[node name="BalaoB" type="Sprite" parent="."]
+position = Vector2( 313, 149 )
+scale = Vector2( 3.37, 3.37 )
+texture = ExtResource( 66 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 190.0
+margin_top = 61.0
+margin_right = 442.0
+margin_bottom = 129.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Encha o caminhão de clóro até a linha verde!"
+autowrap = true
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 495.945, 220 )
+scale = Vector2( 0.89449, 1 )
+points = PoolVector2Array( 0, 0, 500, 0 )
+default_color = Color( 0, 1, 0.227451, 1 )
+
+[connection signal="pressed" from="btn_encher" to="." method="_on_btn_encher_pressed"]
+[connection signal="pressed" from="btn_esvaziar" to="." method="_on_btn_esvaziar_pressed"]
+[connection signal="pressed" from="btn_submit" to="." method="_on_btn_submit_pressed"]
