@@ -142,7 +142,7 @@ margin_right = 442.0
 margin_bottom = 129.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Encha o caminhão de clóro até a linha verde!"
+text = "Encha o caminhão de PVC até a linha verde!"
 autowrap = true
 
 [node name="Line2D" type="Line2D" parent="."]

@@ -191,8 +191,8 @@ scale = Vector2( 4.34722, 4.34722 )
 texture = ExtResource( 104 )
 
 [node name="Line2D" type="Line2D" parent="."]
-position = Vector2( 277.333, 183.5 )
-scale = Vector2( 7.63333, 1.25 )
+position = Vector2( 277.333, 195.5 )
+scale = Vector2( 7.63333, 1.95 )
 points = PoolVector2Array( 0, 0, 9.35131, 0, 10, 0 )
 default_color = Color( 0.12549, 1, 0, 1 )
 
