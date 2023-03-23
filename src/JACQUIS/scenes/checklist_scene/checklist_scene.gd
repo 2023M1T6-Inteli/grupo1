@@ -39,4 +39,4 @@ func _on_Button_pressed():
 
 		
 	if !something_wrong:
-		get_tree().change_scene("res://scenes/game_scene/game_scene.tscn")
+		get_tree().change_scene("res://scenes/controls_embed_scene/controls_embed_scene.tscn")

@@ -20,7 +20,7 @@ func _physics_process(delta):
 			_process_collision()
 
 func _process_collision():
-	get_tree().change_scene("res://scenes/minigame_hole/intro_scene/intro_scene.tscn")
+	get_tree().change_scene("res://scenes/minigame/intro_scene/intro_scene.tscn")
 
 func _ready():
 	moving = true

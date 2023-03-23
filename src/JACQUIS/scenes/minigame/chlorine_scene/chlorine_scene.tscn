@@ -1,0 +1,201 @@
+[gd_scene load_steps=109 format=2]
+
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ69.png" type="Texture" id=1]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ96.png" type="Texture" id=2]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ71.png" type="Texture" id=3]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ70.png" type="Texture" id=4]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ93.png" type="Texture" id=5]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ83.png" type="Texture" id=6]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ89.png" type="Texture" id=7]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ75.png" type="Texture" id=8]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ81.png" type="Texture" id=9]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ99.png" type="Texture" id=10]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ97.png" type="Texture" id=11]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ25.png" type="Texture" id=12]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ13.png" type="Texture" id=13]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ20.png" type="Texture" id=14]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ4.png" type="Texture" id=15]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ45.png" type="Texture" id=16]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ52.png" type="Texture" id=17]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ37.png" type="Texture" id=18]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ50.png" type="Texture" id=19]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ53.png" type="Texture" id=20]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ51.png" type="Texture" id=21]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ48.png" type="Texture" id=22]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ46.png" type="Texture" id=23]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ57.png" type="Texture" id=24]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ36.png" type="Texture" id=25]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ40.png" type="Texture" id=26]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ59.png" type="Texture" id=27]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ60.png" type="Texture" id=28]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ62.png" type="Texture" id=29]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ87.png" type="Texture" id=30]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ91.png" type="Texture" id=31]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ82.png" type="Texture" id=32]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ78.png" type="Texture" id=33]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ95.png" type="Texture" id=34]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ28.png" type="Texture" id=35]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ24.png" type="Texture" id=36]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ77.png" type="Texture" id=37]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ92.png" type="Texture" id=38]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ72.png" type="Texture" id=39]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ73.png" type="Texture" id=40]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ84.png" type="Texture" id=41]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ80.png" type="Texture" id=42]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ29.png" type="Texture" id=43]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ.png" type="Texture" id=44]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ14.png" type="Texture" id=45]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ18.png" type="Texture" id=46]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ21.png" type="Texture" id=47]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ23.png" type="Texture" id=48]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ43.png" type="Texture" id=49]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ86.png" type="Texture" id=50]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ88.png" type="Texture" id=51]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ55.png" type="Texture" id=52]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ68.png" type="Texture" id=53]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ90.png" type="Texture" id=54]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ85.png" type="Texture" id=55]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ76.png" type="Texture" id=56]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ94.png" type="Texture" id=57]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ100.png" type="Texture" id=58]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ11.png" type="Texture" id=59]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ7.png" type="Texture" id=60]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ16.png" type="Texture" id=61]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ9.png" type="Texture" id=62]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ12.png" type="Texture" id=63]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ64.png" type="Texture" id=64]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ39.png" type="Texture" id=65]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ30.png" type="Texture" id=66]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ19.png" type="Texture" id=67]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ17.png" type="Texture" id=68]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ6.png" type="Texture" id=69]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ54.png" type="Texture" id=70]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ79.png" type="Texture" id=71]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ2.png" type="Texture" id=72]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ3.png" type="Texture" id=73]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ5.png" type="Texture" id=74]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ74.png" type="Texture" id=75]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ31.png" type="Texture" id=76]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ1.png" type="Texture" id=77]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ63.png" type="Texture" id=78]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ47.png" type="Texture" id=79]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ32.png" type="Texture" id=80]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ8.png" type="Texture" id=81]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ22.png" type="Texture" id=82]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ10.png" type="Texture" id=83]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ38.png" type="Texture" id=84]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ66.png" type="Texture" id=85]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ67.png" type="Texture" id=86]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ35.png" type="Texture" id=87]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ42.png" type="Texture" id=88]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ56.png" type="Texture" id=89]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ49.png" type="Texture" id=90]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ34.png" type="Texture" id=91]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ33.png" type="Texture" id=92]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ44.png" type="Texture" id=93]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ58.png" type="Texture" id=94]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ61.png" type="Texture" id=95]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ98.png" type="Texture" id=96]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ26.png" type="Texture" id=97]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ41.png" type="Texture" id=98]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ65.png" type="Texture" id=99]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ27.png" type="Texture" id=100]
+[ext_resource path="res://assets/Animação.CaminhãoCLORO/CAMINHAOLIQ15.png" type="Texture" id=101]
+[ext_resource path="res://assets/Fundo.minigame.tombamento.png" type="Texture" id=102]
+[ext_resource path="res://scenes/minigame/chlorine_scene/chlorine_scene.gd" type="Script" id=103]
+[ext_resource path="res://assets/Jacquis/Jacquis.feliz.esq.png" type="Texture" id=104]
+[ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=105]
+[ext_resource path="res://assets/Balao b.png" type="Texture" id=106]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 58 ) ],
+"loop": false,
+"name": "Caminhão Cheio",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 15 ), ExtResource( 74 ), ExtResource( 69 ), ExtResource( 60 ), ExtResource( 81 ), ExtResource( 62 ), ExtResource( 83 ), ExtResource( 59 ), ExtResource( 63 ), ExtResource( 13 ), ExtResource( 45 ), ExtResource( 101 ), ExtResource( 61 ), ExtResource( 68 ), ExtResource( 46 ), ExtResource( 67 ), ExtResource( 14 ), ExtResource( 47 ), ExtResource( 82 ), ExtResource( 48 ), ExtResource( 36 ), ExtResource( 12 ), ExtResource( 97 ), ExtResource( 100 ), ExtResource( 35 ), ExtResource( 43 ), ExtResource( 66 ), ExtResource( 76 ), ExtResource( 80 ), ExtResource( 92 ), ExtResource( 91 ), ExtResource( 87 ), ExtResource( 25 ), ExtResource( 18 ), ExtResource( 84 ), ExtResource( 65 ), ExtResource( 26 ), ExtResource( 98 ), ExtResource( 88 ), ExtResource( 49 ), ExtResource( 93 ), ExtResource( 16 ), ExtResource( 23 ), ExtResource( 79 ), ExtResource( 22 ), ExtResource( 90 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 70 ), ExtResource( 52 ), ExtResource( 89 ), ExtResource( 24 ), ExtResource( 94 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 95 ), ExtResource( 29 ), ExtResource( 78 ), ExtResource( 64 ), ExtResource( 99 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 53 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 75 ), ExtResource( 8 ), ExtResource( 56 ), ExtResource( 37 ), ExtResource( 33 ), ExtResource( 71 ), ExtResource( 42 ), ExtResource( 9 ), ExtResource( 32 ), ExtResource( 6 ), ExtResource( 41 ), ExtResource( 55 ), ExtResource( 50 ), ExtResource( 30 ), ExtResource( 51 ), ExtResource( 7 ), ExtResource( 54 ), ExtResource( 31 ), ExtResource( 38 ), ExtResource( 5 ), ExtResource( 57 ), ExtResource( 34 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 96 ), ExtResource( 10 ), ExtResource( 58 ) ],
+"loop": false,
+"name": "Caminhão enchendo ",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 44 ) ],
+"loop": false,
+"name": "Caminhão vazio",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 105 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 103 )
+
+[node name="Fundominigametombamento" type="Sprite" parent="."]
+position = Vector2( 510, 300.5 )
+scale = Vector2( 0.987415, 1.1901 )
+texture = ExtResource( 102 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 558, 282 )
+scale = Vector2( 0.480515, 0.50715 )
+frames = SubResource( 1 )
+animation = "Caminhão enchendo "
+frame = 95
+offset = Vector2( -480.734, 193.237 )
+
+[node name="btn_more" type="Button" parent="."]
+margin_left = 574.0
+margin_top = 218.0
+margin_right = 710.0
+margin_bottom = 297.0
+text = "Encher"
+
+[node name="btn_less" type="Button" parent="."]
+margin_left = 574.0
+margin_top = 341.0
+margin_right = 710.0
+margin_bottom = 420.0
+rect_pivot_offset = Vector2( 69, 40 )
+text = "Esvaziar"
+
+[node name="btn_submit" type="Button" parent="."]
+margin_left = 727.0
+margin_top = 480.0
+margin_right = 970.0
+margin_bottom = 559.0
+rect_pivot_offset = Vector2( 69, 40 )
+text = "Continuar"
+
+[node name="BalaoB" type="Sprite" parent="."]
+position = Vector2( 675, 174 )
+scale = Vector2( 4.34722, 4.34722 )
+texture = ExtResource( 106 )
+flip_h = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 508.0
+margin_top = 59.0
+margin_right = 844.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 68, 45 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Encha o caminhão de clóro até a linha verde!"
+autowrap = true
+
+[node name="Jacquisfelizesq" type="Sprite" parent="."]
+position = Vector2( 898, 287 )
+scale = Vector2( 4.34722, 4.34722 )
+texture = ExtResource( 104 )
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 277.333, 183.5 )
+scale = Vector2( 7.63333, 1.25 )
+points = PoolVector2Array( 0, 0, 9.35131, 0, 10, 0 )
+default_color = Color( 0.12549, 1, 0, 1 )
+
+[connection signal="pressed" from="btn_more" to="." method="_on_btn_more_pressed"]
+[connection signal="pressed" from="btn_less" to="." method="_on_btn_less_pressed"]
+[connection signal="pressed" from="btn_submit" to="." method="_on_btn_submit_pressed"]
