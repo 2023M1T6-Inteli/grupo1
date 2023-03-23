@@ -62,9 +62,9 @@ clip_text = true
 
 [node name="Btn_Jogar" type="Button" parent="."]
 margin_left = 55.0
-margin_top = 370.0
+margin_top = 371.0
 margin_right = 387.0
-margin_bottom = 437.0
+margin_bottom = 438.0
 rect_pivot_offset = Vector2( -443, -224 )
 flat = true
 clip_text = true
