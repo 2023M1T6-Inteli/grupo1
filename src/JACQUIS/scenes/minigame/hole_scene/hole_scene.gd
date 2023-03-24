@@ -3,7 +3,7 @@ extends Node2D
 
 var z = 0
 
-# Called when the node enters the scene tree for the first time.
+# Inicia a cena e o timer do farol vermelho com um tempo aleatório
 func _ready():
 	var randomtime = RandomNumberGenerator.new()
 	randomtime.randomize()
@@ -16,7 +16,7 @@ func _ready():
 	$Celular.visible = false
 
 
-
+# Lida com o timeout do farol vermelho
 func _on_Tmr_Vermelho_timeout():
 	$Celular.visible = true
 	$Tmr_amarelo.start()
@@ -28,12 +28,17 @@ func _on_Tmr_Vermelho_timeout():
 	$SemafaroVazio/SemafaroVerde.modulate.b = 1
 	z = 1
 	
+	
+# Lida com o timeout do farol amarelo
 func _on_Tmr_amarelo_timeout():
 	z = 2
 
+
+# TODO: Implement
 func _on_tmr_Verde_timeout():
 	pass
 	
+# Vai para a próxima cena no fluxo de jogo, seja gameover ou parabéns!
 func _process(delta):
 	if z == 1:
 		if Input.is_action_just_pressed("ui_accept"):

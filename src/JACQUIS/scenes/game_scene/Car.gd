@@ -12,6 +12,8 @@ func _process(delta):
 		if sprite_speed <= 400 * 1.22:
 			sprite_speed += 0.3
 
+
+# Lida com a movimentação do carro
 func _physics_process(delta):
 	if (moving):
 		var dislocation = Vector2(-sprite_speed, 0)
@@ -19,8 +21,12 @@ func _physics_process(delta):
 		if get_slide_count() > 0:
 			_process_collision()
 
+
+# Processa a colisão
 func _process_collision():
 	get_tree().change_scene("res://scenes/minigame/intro_scene/intro_scene.tscn")
 
+
+# Faz o carro se mover quando o sprite entra em cena
 func _ready():
 	moving = true

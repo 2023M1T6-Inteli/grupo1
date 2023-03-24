@@ -1,7 +1,6 @@
 extends Sprite
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if self.rotation_degrees >= -125:
 		self.rotation_degrees -= 1
@@ -9,6 +8,7 @@ func _process(delta):
 		self.rotation_degrees -= 0
 	if Input.is_action_just_pressed("ui_cancel"):
 		self.rotation_degrees +=11
+
 
 
 func _on_Timer_timeout():

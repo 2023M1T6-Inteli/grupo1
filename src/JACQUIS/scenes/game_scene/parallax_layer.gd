@@ -2,6 +2,8 @@ extends ParallaxLayer
 export(float) var backgroundspeed = -225
 var bgscroll = false
 
+
+# Lida com a movimentação do background
 func _process(delta) -> void:
 	if bgscroll == true:
 		self.motion_offset.x += backgroundspeed * delta 

@@ -1,6 +1,6 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
+# Inicia a música quando o Node entra em cena
 func _ready():
 	MusicControler._play_music()
