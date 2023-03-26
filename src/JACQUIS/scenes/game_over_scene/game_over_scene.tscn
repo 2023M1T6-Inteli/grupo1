@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://scenes/game_over_scene/btn_recomecar.gd" type="Script" id=2]
 [ext_resource path="res://assets/botao.png" type="Texture" id=3]
-[ext_resource path="res://scenes/game_over_scene/btn_desistir.gd" type="Script" id=4]
 
 [sub_resource type="GDScript" id=3]
 script/source = "extends Node2D
+
+
+func _on_Btn_Recomecar_pressed():
+	get_tree().change_scene(\"res://scenes/intro_scene/intro_scene.tscn\")
+
+
+func _on_Btn_Desistir_pressed():
+	get_tree().change_scene(\"res://scenes/main_scene/main_scene.tscn\")
 "
 
 [sub_resource type="DynamicFont" id=1]
@@ -57,7 +63,6 @@ margin_right = 396.0
 margin_bottom = 334.0
 rect_pivot_offset = Vector2( 161, 35 )
 flat = true
-script = ExtResource( 2 )
 
 [node name="Botao" type="Sprite" parent="Btn_Recomecar"]
 position = Vector2( 152, 34 )
@@ -83,7 +88,6 @@ margin_right = 396.0
 margin_bottom = 454.0
 rect_pivot_offset = Vector2( 161, 35 )
 flat = true
-script = ExtResource( 4 )
 
 [node name="Botao" type="Sprite" parent="Btn_Desistir"]
 position = Vector2( 152, 34 )
@@ -110,5 +114,5 @@ margin_bottom = 573.0
 autowrap = true
 clip_text = true
 
-[connection signal="pressed" from="Btn_Recomecar" to="Btn_Recomecar" method="_on_Btn_Recomecar_pressed"]
-[connection signal="pressed" from="Btn_Desistir" to="Btn_Desistir" method="_on_Btn_Desistir_pressed"]
+[connection signal="pressed" from="Btn_Recomecar" to="." method="_on_Btn_Recomecar_pressed"]
+[connection signal="pressed" from="Btn_Desistir" to="." method="_on_Btn_Desistir_pressed"]
