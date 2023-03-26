@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/intro_scene/intro_scene.gd" type="Script" id=1]
 [ext_resource path="res://assets/road.png" type="Texture" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://assets/warehouse.png" type="Texture" id=4]
 [ext_resource path="res://assets/sky.jpg" type="Texture" id=5]
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://scenes/intro_scene/btn_comecar.gd" type="Script" id=7]
 [ext_resource path="res://assets/Jacquis/Jacquis.feliz.esq.png" type="Texture" id=8]
 [ext_resource path="res://assets/truck.png" type="Texture" id=9]
 
@@ -42,7 +41,6 @@ margin_bottom = 497.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 2 )
 text = "Começar"
-script = ExtResource( 7 )
 
 [node name="BalaoB" type="Sprite" parent="."]
 position = Vector2( 199, 296 )
@@ -73,4 +71,4 @@ position = Vector2( 87, 456 )
 scale = Vector2( 3.81111, 3.81111 )
 texture = ExtResource( 9 )
 
-[connection signal="pressed" from="Btn_comecar" to="Btn_comecar" method="_on_Button_pressed"]
+[connection signal="pressed" from="Btn_comecar" to="." method="_on_Btn_comecar_pressed"]

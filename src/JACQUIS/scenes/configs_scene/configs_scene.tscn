@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/configs_scene/btn_voltar.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/botao.png" type="Texture" id=3]
 [ext_resource path="res://scenes/configs_scene/configs_scene.gd" type="Script" id=4]
@@ -54,22 +53,21 @@ margin_right = 328.0
 margin_bottom = 253.0
 pressed = true
 
-[node name="Btn_Voltar" type="Button" parent="."]
+[node name="btn_voltar" type="Button" parent="."]
 margin_left = 407.0
 margin_top = 517.0
 margin_right = 585.0
 margin_bottom = 557.0
 flat = true
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Botao" type="Sprite" parent="Btn_Voltar"]
+[node name="Botao" type="Sprite" parent="btn_voltar"]
 position = Vector2( 78, 24 )
 texture = ExtResource( 3 )
 
-[node name="Lbl_voltar" type="Label" parent="Btn_Voltar"]
+[node name="Lbl_voltar" type="Label" parent="btn_voltar"]
 margin_top = 1.0
 margin_right = 187.0
 margin_bottom = 41.0
@@ -82,4 +80,4 @@ clip_text = true
 
 [connection signal="value_changed" from="Sldr_Volume" to="." method="_on_HSlider_value_changed"]
 [connection signal="toggled" from="Cbx_mute" to="." method="_on_CheckBox_toggled"]
-[connection signal="pressed" from="Btn_Voltar" to="Btn_Voltar" method="_on_Btn_Voltar_pressed"]
+[connection signal="pressed" from="btn_voltar" to="." method="_on_btn_voltar_pressed"]
