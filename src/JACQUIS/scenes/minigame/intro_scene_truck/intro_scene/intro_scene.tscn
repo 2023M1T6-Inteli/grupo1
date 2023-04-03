@@ -1,19 +1,19 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/tela.instruções.checklist.png" type="Texture" id=1]
-[ext_resource path="res://scenes/minigame/intro_scene/btn_comecar.gd" type="Script" id=2]
-[ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/minigame/intro_scene_truck/intro_scene/btn_comecar.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/tela.instruções.checklist.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Telainstruçõeschecklist" type="Sprite" parent="."]
 position = Vector2( 515.438, 305.5 )
 scale = Vector2( 0.942368, 0.942368 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 
 [node name="btn_comecar" type="Button" parent="."]
 margin_left = 418.0
@@ -24,6 +24,6 @@ custom_fonts/font = SubResource( 1 )
 text = "começar"
 clip_text = true
 icon_align = 1
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [connection signal="pressed" from="btn_comecar" to="btn_comecar" method="_on_Btn_comecar2_pressed"]
