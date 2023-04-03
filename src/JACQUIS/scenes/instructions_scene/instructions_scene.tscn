@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/instructions_scene/instructions_scene.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/main_game_instructions.png" type="Texture" id=3]
+[ext_resource path="res://assets/botao.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
 font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
@@ -17,11 +22,26 @@ scale = Vector2( 1.19591, 1.33556 )
 texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 731.0
-margin_top = 468.0
-margin_right = 961.0
-margin_bottom = 550.0
+margin_left = 738.0
+margin_top = 505.0
+margin_right = 968.0
+margin_bottom = 542.0
 custom_fonts/font = SubResource( 1 )
 text = "Continuar"
+
+[node name="Botao" type="Sprite" parent="Button"]
+position = Vector2( 98.9999, 21.0001 )
+scale = Vector2( 1.36, 1.32692 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Button"]
+margin_left = 5.0
+margin_top = -4.0
+margin_right = 225.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 2 )
+text = "CONTINUAR "
+align = 1
+valign = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
