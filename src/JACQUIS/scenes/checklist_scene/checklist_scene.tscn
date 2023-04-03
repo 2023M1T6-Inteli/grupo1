@@ -1,14 +1,13 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://assets/background.checklist.png" type="Texture" id=1]
+[ext_resource path="res://assets/backgroundRoad.png" type="Texture" id=1]
 [ext_resource path="res://assets/Checklist.png" type="Texture" id=2]
 [ext_resource path="res://scenes/checklist_scene/checklist_scene.gd" type="Script" id=3]
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/Icon.errado.png" type="Texture" id=5]
-[ext_resource path="res://assets/Botão conferir.png" type="Texture" id=6]
+[ext_resource path="res://assets/botao.png" type="Texture" id=6]
 [ext_resource path="res://assets/Jacquis/Jacquis.boné.esq.png" type="Texture" id=7]
 [ext_resource path="res://assets/Balao b.png" type="Texture" id=8]
-
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 4 )
@@ -31,6 +30,9 @@ font_data = ExtResource( 4 )
 [sub_resource type="DynamicFont" id=7]
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 4 )
+
 [sub_resource type="DynamicFont" id=8]
 font_data = ExtResource( 4 )
 
@@ -38,13 +40,10 @@ font_data = ExtResource( 4 )
 scale = Vector2( 1, 0.987097 )
 script = ExtResource( 3 )
 
-[node name="Backgroundchecklist" type="Sprite" parent="."]
-position = Vector2( 515, 303.217 )
-scale = Vector2( 0.936336, 0.941668 )
+[node name="BackgroundRoad" type="Sprite" parent="."]
+position = Vector2( 899.74, 335.709 )
+scale = Vector2( 9.45406, 9.45407 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Checklist" type="Sprite" parent="."]
 position = Vector2( 280, 291 )
@@ -158,18 +157,28 @@ margin_bottom = 413.0
 rect_scale = Vector2( 1.5, 1.5 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 538.0
-margin_top = 470.0
-margin_right = 664.0
-margin_bottom = 501.0
+margin_left = 557.0
+margin_top = 470.065
+margin_right = 683.0
+margin_bottom = 501.065
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 7 )
 text = "Conferir"
 
-[node name="BotãoConferir" type="Sprite" parent="Button"]
-position = Vector2( 76.5, 26.3724 )
-scale = Vector2( 0.0939592, 0.0939593 )
+[node name="Botao" type="Sprite" parent="Button"]
+position = Vector2( 56, 20.2614 )
+scale = Vector2( 0.7825, 0.896179 )
 texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Button/Botao"]
+margin_left = -69.0
+margin_top = -22.0
+margin_right = 93.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 9 )
+text = "CONFERIR "
+align = 1
+valign = 1
 
 [node name="Jacquisbonéesq" type="Sprite" parent="."]
 position = Vector2( 1008.04, 308.982 )
