@@ -41,11 +41,10 @@ custom_fonts/font = SubResource( 1 )
 text = "Voltar"
 
 [node name="scroll" type="ScrollContainer" parent="."]
-margin_left = 295.0
-margin_top = 46.0
-margin_right = 827.0
-margin_bottom = 484.0
-scroll_horizontal_enabled = false
+margin_left = 61.0
+margin_top = 50.0
+margin_right = 962.0
+margin_bottom = 488.0
 
 [node name="ranking" type="Label" parent="scroll"]
 margin_bottom = 34.0

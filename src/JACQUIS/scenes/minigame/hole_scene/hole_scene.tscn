@@ -63,7 +63,7 @@ texture = ExtResource( 9 )
 one_shot = true
 
 [node name="Tmr_amarelo" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 1.362
 one_shot = true
 
 [node name="tmr_Verde" type="Timer" parent="."]

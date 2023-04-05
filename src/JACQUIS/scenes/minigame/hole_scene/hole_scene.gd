@@ -40,7 +40,7 @@ func _on_Tmr_Vermelho_timeout():
 	
 # Lida com o timeout do farol amarelo
 func _on_Tmr_amarelo_timeout():
-	z = 1.5
+	z = 2
 
 
 # TODO: Implement
