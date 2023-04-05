@@ -8,6 +8,7 @@ func _ready():
 
 # Mudanças de cena
 func _on_btn_play_pressed():
+	Global.vida = 3
 	get_tree().change_scene("res://scenes/name_scene/name_scene.tscn")
 
 

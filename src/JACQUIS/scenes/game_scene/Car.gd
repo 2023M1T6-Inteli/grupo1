@@ -24,7 +24,11 @@ func _physics_process(delta):
 
 # Processa a colisão
 func _process_collision():
-	get_tree().change_scene("res://scenes/minigame/intro_scene/intro_scene.tscn")
+	Global.vida -= 1
+	if Global.vida < 0:
+		get_tree().change_scene("res://scenes/game_over_scene/game_over_scene.tscn")
+	else:
+		get_tree().change_scene("res://scenes/minigame/intro_scene/intro_scene.tscn")
 
 
 # Faz o carro se mover quando o sprite entra em cena

@@ -7,7 +7,7 @@ var z = 0
 func _ready():
 	var randomtime = RandomNumberGenerator.new()
 	randomtime.randomize()
-	var tempo= randomtime.randi_range(1,10)
+	var tempo= randomtime.randi_range(1,4)
 	$Tmr_Vermelho.wait_time = tempo
 	$Tmr_Vermelho.start()
 	$SemafaroVazio/SemafaroVermelho.modulate.r = 1
@@ -31,7 +31,7 @@ func _on_Tmr_Vermelho_timeout():
 	
 # Lida com o timeout do farol amarelo
 func _on_Tmr_amarelo_timeout():
-	z = 2
+	z = 1.5
 
 
 # TODO: Implement
