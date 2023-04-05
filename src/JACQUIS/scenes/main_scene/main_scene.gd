@@ -4,6 +4,16 @@ extends Node2D
 # Inicia a música quando o Node entra em cena
 func _ready():
 	MusicControler._play_music()
+	var ranking = File.new()
+	ranking.open("user://ranking.save", File.WRITE)
+	ranking.store_string("Olá!")
+	ranking.close()
+	
+	ranking = File.new()
+	if ranking.file_exists("user://ranking.save"):
+		ranking.open("user://ranking.save", File.READ)
+		$testLabel.text = ranking.get_as_text()
+	ranking.close()
 
 
 # Mudanças de cena
