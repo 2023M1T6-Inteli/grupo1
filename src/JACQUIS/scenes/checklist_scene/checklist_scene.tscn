@@ -111,7 +111,7 @@ margin_top = 387.0
 margin_right = 375.0
 margin_bottom = 408.0
 custom_fonts/font = SubResource( 5 )
-text = "Viajar à 70km/h"
+text = "Viajar acima da velocidade"
 
 [node name="CheckBox" type="CheckBox" parent="."]
 modulate = Color( 0.909804, 0.901961, 0.901961, 1 )
