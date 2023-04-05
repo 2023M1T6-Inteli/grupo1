@@ -12,12 +12,7 @@ func _on_btn_play_pressed():
 
 
 func _on_btn_controls_pressed():
-	#get_tree().change_scene("res://scenes/controls_scene/controls_scene.tscn")
-	var ranking = File.new()
-	if ranking.file_exists("user://ranking.save"):
-		ranking.open("user://ranking.save", File.READ)
-		$testLabel.text = ranking.get_as_text()
-	ranking.close()
+	get_tree().change_scene("res://scenes/controls_scene/controls_scene.tscn")
 
 
 func _on_btn_config_pressed():
@@ -59,3 +54,18 @@ func _on_btn_config_mouse_entered():
 	$btn_config/sprt_config.modulate.r = 0.7
 	$btn_config/sprt_config.modulate.g = 0.7
 	$btn_config/sprt_config.modulate.b = 0.7
+	
+func _on_btn_ranking_mouse_entered():
+	$btn_ranking/sprt_controls.modulate.r = 0.7
+	$btn_ranking/sprt_controls.modulate.g = 0.7
+	$btn_ranking/sprt_controls.modulate.b = 0.7
+
+
+func _on_btn_ranking_mouse_exited():
+	$btn_ranking/sprt_controls.modulate.r = 1
+	$btn_ranking/sprt_controls.modulate.g = 1
+	$btn_ranking/sprt_controls.modulate.b = 1
+
+
+func _on_btn_ranking_pressed():
+	get_tree().change_scene("res://scenes/ranking_scene/ranking_scene.tscn")
