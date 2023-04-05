@@ -4,25 +4,26 @@ extends Node2D
 # Inicia a música quando o Node entra em cena
 func _ready():
 	MusicControler._play_music()
-	var ranking = File.new()
-	ranking.open("user://ranking.save", File.WRITE)
-	ranking.store_string("Olá!")
-	ranking.close()
-	
-	ranking = File.new()
-	if ranking.file_exists("user://ranking.save"):
-		ranking.open("user://ranking.save", File.READ)
-		$testLabel.text = ranking.get_as_text()
-	ranking.close()
 
 
 # Mudanças de cena
 func _on_btn_play_pressed():
-	get_tree().change_scene("res://scenes/name_scene/name_scene.tscn")
+	#get_tree().change_scene("res://scenes/name_scene/name_scene.tscn")
+	var ranking = File.new()
+	ranking.open("user://ranking.save", File.READ_WRITE)
+	ranking.seek_end()
+	#ranking.open("user://ranking.save", File.WRITE)
+	ranking.store_string("B")
+	ranking.close()
 
 
 func _on_btn_controls_pressed():
-	get_tree().change_scene("res://scenes/controls_scene/controls_scene.tscn")
+	#get_tree().change_scene("res://scenes/controls_scene/controls_scene.tscn")
+	var ranking = File.new()
+	if ranking.file_exists("user://ranking.save"):
+		ranking.open("user://ranking.save", File.READ)
+		$testLabel.text = ranking.get_as_text()
+	ranking.close()
 
 
 func _on_btn_config_pressed():
