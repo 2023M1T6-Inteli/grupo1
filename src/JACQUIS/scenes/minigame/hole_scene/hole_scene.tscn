@@ -69,6 +69,10 @@ one_shot = true
 [node name="tmr_Verde" type="Timer" parent="."]
 one_shot = true
 
+[node name="tmr_Celular" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="Tmr_Vermelho" to="." method="_on_Tmr_Vermelho_timeout"]
 [connection signal="timeout" from="Tmr_amarelo" to="." method="_on_Tmr_amarelo_timeout"]
 [connection signal="timeout" from="tmr_Verde" to="." method="_on_tmr_Verde_timeout"]
+[connection signal="timeout" from="tmr_Celular" to="." method="_on_tmr_Celular_timeout"]

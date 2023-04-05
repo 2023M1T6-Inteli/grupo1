@@ -8,13 +8,22 @@ func _ready():
 	var randomtime = RandomNumberGenerator.new()
 	randomtime.randomize()
 	var tempo= randomtime.randi_range(1,4)
-	$Tmr_Vermelho.wait_time = tempo
-	$Tmr_Vermelho.start()
+	$tmr_Celular.wait_time = tempo
+	$tmr_Celular.start()
 	$SemafaroVazio/SemafaroVermelho.modulate.r = 1
 	$SemafaroVazio/SemafaroVermelho.modulate.g = 1
 	$SemafaroVazio/SemafaroVermelho.modulate.b = 1
 	$Celular.visible = false
 
+
+# Timeout para aparecer o celular
+func _on_tmr_Celular_timeout():
+	$Celular.visible = true
+	var randomtime = RandomNumberGenerator.new()
+	randomtime.randomize()
+	var tempo= randomtime.randi_range(1,4)
+	$Tmr_Vermelho.wait_time = tempo
+	$Tmr_Vermelho.start()
 
 # Lida com o timeout do farol vermelho
 func _on_Tmr_Vermelho_timeout():
