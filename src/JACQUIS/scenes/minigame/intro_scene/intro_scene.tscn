@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/minigame/intro_scene_truck/intro_scene/btn_comecar.gd" type="Script" id=1]
+[ext_resource path="res://scenes/minigame/intro_scene/btn_comecar.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/tela.instruções.checklist.png" type="Texture" id=3]
 

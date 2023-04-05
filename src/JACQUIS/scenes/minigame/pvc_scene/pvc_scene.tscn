@@ -63,7 +63,7 @@
 [ext_resource path="res://assets/Animação.CaminhãoPVC/CAMINHAOPVC9.png" type="Texture" id=61]
 [ext_resource path="res://assets/Animação.CaminhãoPVC/CAMINHAOPVC3.png" type="Texture" id=62]
 [ext_resource path="res://Fonts/Retro Gaming.ttf" type="DynamicFontData" id=63]
-[ext_resource path="res://scenes/pvc_scene/pvc_scene.gd" type="Script" id=64]
+[ext_resource path="res://scenes/minigame/pvc_scene/pvc_scene.gd" type="Script" id=64]
 [ext_resource path="res://assets/Jacquis/Jacquis.feliz.png" type="Texture" id=65]
 [ext_resource path="res://assets/Balao b.png" type="Texture" id=66]
 [ext_resource path="res://assets/botao.png" type="Texture" id=67]
