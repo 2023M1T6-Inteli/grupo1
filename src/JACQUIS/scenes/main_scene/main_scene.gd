@@ -8,13 +8,7 @@ func _ready():
 
 # Mudanças de cena
 func _on_btn_play_pressed():
-	#get_tree().change_scene("res://scenes/name_scene/name_scene.tscn")
-	var ranking = File.new()
-	ranking.open("user://ranking.save", File.READ_WRITE)
-	ranking.seek_end()
-	#ranking.open("user://ranking.save", File.WRITE)
-	ranking.store_string("B")
-	ranking.close()
+	get_tree().change_scene("res://scenes/name_scene/name_scene.tscn")
 
 
 func _on_btn_controls_pressed():
