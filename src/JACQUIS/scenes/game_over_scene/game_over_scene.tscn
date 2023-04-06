@@ -11,12 +11,12 @@ script/source = "extends Node2D
 func _on_Btn_Recomecar_pressed():
 	_save_score()
 	Global.score = 0
-	get_tree().change_scene(\"res://scenes/intro_scene/intro_scene.tscn\")
+	get_tree().change_scene(\"res://scenes/checklist_scene/checklist_scene.tscn\")
 
 
 func _on_Btn_Desistir_pressed():
 	_save_score()
-	get_tree().change_scene(\"res://scenes/ranking_scene/ranking_scene.tscn\")
+	get_tree().change_scene(\"res://scenes/main_scene/main_scene.tscn\")
 
 func _save_score():
 	var ranking = File.new()
