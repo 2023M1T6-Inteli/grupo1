@@ -1,4 +1,4 @@
-# Inteli - Instituto de Tecnologia e Liderança 
+# Inteli - Instituto de Tecnologia e Liderança
 
 <p align="center">
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
@@ -6,6 +6,8 @@
 
 # JACQUIS
 Jogo Autônomo para Caminhoneiros Químicos
+
+[Jogue o JAQUIS clicando aqui](https://2023m1t6-inteli.github.io/grupo1/)
 
 ## Unímpar
 ### Integrantes:
@@ -18,6 +20,8 @@ Jogo Autônomo para Caminhoneiros Químicos
 
 ## Descrição
 **Unímpar - Porque par sozinho não dá.**
+
+O Jaquis é um jogo de corrida desenhado para educar os caminhoneiros da empresa Unipar nas boas práticas de segurança. Seu objetivo é ser simples e intuitivo, seguindo os protocolos já existentes, visando mantê-los na cabeça destes funcionários.
 
 <p align="center">
 <img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
@@ -114,7 +118,14 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2023M1T6-Inteli/grupo1">JAQUIS</a> by
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/fuchsfelipel">Felipe Liberman Fuchs</a>
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Biabborges">Bianca Borges Lins</a>
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/katsukimurata">Giovana Katsuki</a>
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/JoaoSuarez">Joao Furquim de Campos Suarez</a>
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Leandro672">Leandro Dos Santos Gomes</a>
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/samyflaksberg">Samy Flaksberg</a>
+is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
 
 ## 🎓 Referências
 
