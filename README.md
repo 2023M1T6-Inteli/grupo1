@@ -14,7 +14,7 @@ Jogo Autônomo para Caminhoneiros Químicos
 - [Felipe Liberman Fuchs](https://linkedin.com/in/fuchsfelipel)
 - [Bianca Borges Lins](https://www.linkedin.com/in/bianca-borges-969586206)
 - [Pedro Henrique Lucarini](https://www.linkedin.com/in/phlucarini)
-- [Giovana Katsuki](#)
+- [Giovana Katsuki](https://www.linkedin.com/in/giovana-katsuki-murata-503a94264/)
 - [Joao Furquim de Campos Suarez](https://www.linkedin.com/in/joao-suarez-104110250/)
 - [Leandro Dos Santos Gomes](https://www.linkedin.com/in/leandro-dos-santos-gomes/)
 
@@ -23,12 +23,9 @@ Jogo Autônomo para Caminhoneiros Químicos
 
 O Jaquis é um jogo de corrida desenhado para educar os caminhoneiros da empresa Unipar nas boas práticas de segurança. Seu objetivo é ser simples e intuitivo, seguindo os protocolos já existentes, visando mantê-los na cabeça destes funcionários.
 
-<p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
+## 🎮 Jogue agora
 
-
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [Unímpar](https://2023m1t6-inteli.github.io/grupo1/)
 
 ## 🛠 Estrutura de pastas
 
