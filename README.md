@@ -115,13 +115,13 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2023M1T6-Inteli/grupo1">JAQUIS</a> by
-<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/fuchsfelipel">Felipe Liberman Fuchs</a>
-<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Biabborges">Bianca Borges Lins</a>
-<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/katsukimurata">Giovana Katsuki</a>
-<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/JoaoSuarez">Joao Furquim de Campos Suarez</a>
-<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Leandro672">Leandro Dos Santos Gomes</a>
-<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/samyflaksberg">Samy Flaksberg</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2023M1T6-Inteli/grupo1">JAQUIS</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/InteliProjects">Inteli</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/fuchsfelipel">Felipe Liberman Fuchs</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Biabborges">Bianca Borges Lins</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/katsukimurata">Giovana Katsuki</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/JoaoSuarez">Joao Furquim de Campos Suarez</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Leandro672">Leandro Dos Santos Gomes</a>,
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/samyflaksberg">Samy Flaksberg</a>.
 is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
 
 ## 🎓 Referências
