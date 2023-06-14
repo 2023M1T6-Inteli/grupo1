@@ -4,12 +4,9 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://s3.amazonaws.com/gupy5/production/companies/26702/career/63484/images/2022-04-28_16-56_logo.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# JACQUIS
-Jogo Autônomo para Caminhoneiros Químicos
+# Nome do Projeto: JACQUIS
 
-[Jogue o JAQUIS clicando aqui](https://2023m1t6-inteli.github.io/grupo1/)
-
-## Unímpar
+## Nome do Grupo: Unímpar
 ### Integrantes:
 - [Felipe Liberman Fuchs](https://linkedin.com/in/fuchsfelipel)
 - [Bianca Borges Lins](https://www.linkedin.com/in/bianca-borges-969586206)
